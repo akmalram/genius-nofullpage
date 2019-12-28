@@ -15,6 +15,10 @@ header {
     .btn-primary {
         background: var(--violet-color);
     }
+
+    @include sm-block {
+        min-height: 60vh;
+    }
 }
 
 .page-title {

@@ -100,7 +100,6 @@ img {
     font-size: 25px;
     line-height: 34px;
     font-weight: normal;
-    color: #333;
     text-align: center;
     margin-bottom: 40px;
     margin-top: 20px;
@@ -244,4 +243,8 @@ button {
 
 .btn-purple {
     @include btn(#231E60, #fff);
+}
+
+.text-right {
+    text-align: right;
 }

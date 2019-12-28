@@ -240,7 +240,6 @@ img {
   font-size: 25px;
   line-height: 34px;
   font-weight: normal;
-  color: #333;
   text-align: center;
   margin-bottom: 40px;
   margin-top: 20px;
@@ -490,5 +489,9 @@ button {
     line-height: 1;
     letter-spacing: 0.5px;
   }
+}
+
+.text-right {
+  text-align: right;
 }
 /*# sourceMappingURL=general.css.map */
