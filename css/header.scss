@@ -1,0 +1,240 @@
+@import './mixins';
+@import './smart-grid';
+header {
+    color: #fff;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: url(../img/office-violet.jpg) no-repeat center center;
+    background-size: cover;
+    box-shadow: inset 0 0 1000rem 1000rem rgba($color: #000000, $alpha: .4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .btn-primary {
+        background: var(--violet-color);
+    }
+}
+
+.page-title {
+    font-size: 60px;
+    text-align: center;
+    max-width: 90% !important;
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    @include sm-block {
+        font-size: 40px;
+        width: 500px;
+    }
+    @include xs-block {
+        font-size: 30px;
+        width: auto;
+    }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vw;
+    border-bottom: 2px solid transparent;
+    box-sizing: border-box;
+    color: #fff;
+    z-index: 1111;
+    transition: all .5s ease;
+    &.modalOpened {
+        .logo a {
+            color: #fff !important;
+        }
+        #fp-nav ul li a span,
+        #fp-nav ul li a span::before,
+        #fp-nav ul li a span::after {
+            background: #fff !important;
+        }
+    }
+    &.scrolled {
+        background: #fff;
+        border-bottom: 2px solid #000;
+        .logo a,
+        .navbar-title {
+            color: #000;
+        }
+        .togglebtn .line,
+        .togglebtn .line::before,
+        .togglebtn .line::after {
+            background-color: #000 !important;
+        }
+    }
+    .logo {
+        position: relative;
+        z-index: 110;
+        a {
+            font-size: 44px;
+            color: #fff;
+            transition: all 800ms ease;
+            @include xs-block {
+                font-size: 27px;
+            }
+        }
+    }
+    .navbar-title {
+        font-size: 30px;
+        transition: all 800ms ease;
+    }
+    .menu-modal {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        box-sizing: border-box;
+        background: #2D3136;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+        transition: all .6s ease;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            .list .item .link {
+                opacity: 1;
+            }
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .list {
+            .item {
+                text-align: center;
+            }
+            .link {
+                font-size: 48px;
+                color: #fff;
+                line-height: 1.6;
+                cursor: pointer;
+                position: relative;
+                transition: opacity .5s ease-in-out;
+                will-change: opacity;
+                opacity: 0;
+                @include sm-block {
+                    font-size: 40px;
+                }
+                @include xs-block {
+                    font-size: 30px;
+                }
+                &::before {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    height: 3px;
+                    bottom: -5px;
+                    left: 51%;
+                    right: 50%;
+                    transition: all .3s ease;
+                    background-color: #fff;
+                }
+                &:hover::before {
+                    left: 0;
+                    right: 0;
+                }
+            }
+            @for $i from 1 to 6 {
+                .link.link-#{$i} {
+                    transition-delay: #{$i * 100}ms;
+                }
+            }
+        }
+    }
+    .menu-toggler {
+        z-index: 110;
+        position: relative;
+
+        .togglebtn {
+            z-index: 2000;
+            width: 4rem;
+            height: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: none;
+            cursor: pointer;
+            .line {
+                display: block;
+                width: 1.75rem;
+                height: 2px;
+                background: #fefefe;
+                line-height: 1;
+                position: relative;
+                display: block;
+                transform: rotate(0);
+                transition: transform 0.2s ease-in, background-color 0.4s ease, -webkit-transform 0.2s ease-in;
+                border-radius: 5px;
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 1.75rem;
+                    height: 2px;
+                    opacity: 1;
+                    background: #fefefe;
+                    transform: rotate(0);
+                    border-radius: 5px;
+                    transition: top 0.2s ease-in, opacity .2s ease-in, transform 0.2s 0.2s ease-out, background-color 0.4s ease, -webkit-transform 0.2s 0.2s ease-out;
+                }
+                &::before {
+                    top: -.5rem;
+                }
+                &::after {
+                    top: .5rem;
+                }
+            }
+            &.active {
+                .line {
+                    background-color: #fefefe;
+                    transform: rotate(45deg);
+                    transition: transform 0.2s 0.2s ease-out, background-color 0.4s ease, -webkit-transform 0.2s 0.2s ease-out;
+                    &::before {
+                        top: 0;
+                        transform: rotate(90deg);
+                        transition: top 0.2s ease-in, transform 0.2s 0.2s ease-out, background-color 0.4s ease, -webkit-transform 0.2s 0.2s ease-out;
+                    }
+                    &::after {
+                        top: 0;
+                        opacity: 0;
+                        transition: top 0.2s ease-in, opacity 0.2s 0.2s ease-out, background-color 0.4s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.socials {
+    a {
+        color: #000;
+        font-weight: normal;
+        margin-right: 10px;
+        font-size: 27px;
+        padding: .2em;
+        text-align: center;
+        transition: border .3s ease;
+        border-bottom: 2px solid transparent;
+        &:hover {
+            border-color: #000;
+        }
+        @include sm-block {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+    }
+}
