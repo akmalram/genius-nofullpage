@@ -11,75 +11,85 @@ $blue-color: #003A9D;
     --blue-color: #003A9D;
 }
 
+
+.block-title {
+    @include title-primary();
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
 .section {
     min-height: auto;
     margin: 80px auto;
-}
 
-.title-primary {
-    margin-top: 20px;
-    margin-bottom: 80px;
+    @include sm-block {
+        margin: 50px auto;
+    }
+
+    @include xs-block {
+        margin: 20px auto;
+    }
 }
 
 .fullpage {
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .aboutus {
-    .content,
-    .photo {
-        width: 50%;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
+    min-height: 100vh;
     .content {
-        transform: translateY(-10vh);
-    }
-    .photo {
-        transform: translateY(10vh);
-        img {
-            border-radius: 5px;
+        max-width: 500px;
+        height: 500px;
+        background: #fefe;
+        padding: 30px;
+        box-sizing: border-box;
+
+        @include xs-block {
+            padding: 10px;
+            height: auto;
         }
     }
-    .paragraph {
-        margin-bottom: 26px;
+
+    .img {
+        transform: translate(-130px, -80px);
+        border-radius: 3px;
+
+        @include sm-block {
+            transform: translate(-48px, -66px);
+        }
+
+        @include xs-block {
+            transform: translate(-13px, -27px);
+        }
     }
+
     .title-primary {
-        margin-bottom: 20px;
-    }
-    @include lg-block {
-        .content {
-            transform: translateY(-5vh);
-        }
-        .photo {
-            transform: translateY(10vh);
+        transform: translate(-54px, -57px);
+
+        @include xs-block {
+            transform: translate(-23px, -12px);
         }
     }
-    @include md-block {
-        .paragraph {
-            margin-bottom: 16px;
+
+    .paragraph {
+        line-height: 1.5;
+        transform: translate(93px, -26px);
+        background: rgba(255, 255, 255, .5);
+        padding: 20px;
+
+        @include sm-block {
+            transform: translate(24px, -34px);
+            font-size: 18px;
         }
-        .content {
-            transform: translateY(-5vh);
-        }
-        .photo {
-            transform: translateY(10vh);
-        }
-    }
-    @include sm-block {
-        .content,
-        .photo {
-            width: 90vw;
-            margin: 0 auto;
+
+        @include xs-block {
+            font-size: 16px;
+            line-height: 1.3;
+            transform: translate(0, 0);
+            background: none;
             padding: 0;
-            box-sizing: border-box;
-            transform: translateY(0);
-        }
-        .content {
-            margin-bottom: 30px;
         }
     }
 }

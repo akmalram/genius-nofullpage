@@ -372,18 +372,6 @@ button {
   text-align: justify;
 }
 
-@media screen and (max-width: 1200px) {
-  .paragraph {
-    font-size: 17px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .paragraph {
-    font-size: 16px;
-  }
-}
-
 ::-moz-selection {
   background: #000;
   color: #fff;

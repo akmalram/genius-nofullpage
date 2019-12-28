@@ -16,3 +16,22 @@
     align-items: center;
     flex-direction: column;
 }
+
+@mixin title-primary {
+    font-size: 50px;
+    color: rgb(17, 15, 15);
+    text-align: center;
+
+    @include sm-block {
+        font-size: 34px;
+    }
+
+    @include xs-block {
+        font-size: 24px;
+    }
+
+    &.white {
+        color: #fff;
+    }
+
+}

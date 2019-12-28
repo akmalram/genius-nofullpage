@@ -93,22 +93,7 @@ img {
 }
 
 .title-primary {
-    font-size: 50px;
-    color: rgb(17, 15, 15);
-    text-align: center;
-
-    @include sm-block {
-        font-size: 34px;
-    }
-
-    @include xs-block {
-        font-size: 24px;
-    }
-
-    &.white {
-        color: #fff;
-    }
-
+    @include title-primary();
 }
 
 .title-secondary {
@@ -212,14 +197,6 @@ button {
 .paragraph {
     font-size: 20px;
     text-align: justify;
-
-    @include lg-block {
-        font-size: 17px;
-    }
-
-    @include md-block {
-        font-size: 16px;
-    }
 }
 ::selection {
     background: #000;
