@@ -135,7 +135,7 @@ $blue-color: #003A9D;
 
     .course {
         display: block;
-        width: 100%;
+        width: 400px;
         height: 400px;
         box-sizing: border-box;
         color: #fff;
@@ -143,6 +143,10 @@ $blue-color: #003A9D;
         transition: all 400ms ease;
         position: relative;
         border-radius: 3px;
+
+        @include md-block {
+            width: 100%;
+        }
 
         @include xs-block {
             height: 260px;
