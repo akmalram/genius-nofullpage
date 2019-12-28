@@ -576,16 +576,10 @@ footer.footer {
     background-size: cover;
     box-shadow: inset 0 0 0 10000px rgba($color: #000, $alpha: .4);
     min-height: 300px;
-    // background-attachment: fixed;
+    background-attachment: fixed;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.bg-parallax {
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
 }
