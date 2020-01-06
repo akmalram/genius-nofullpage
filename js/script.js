@@ -43,6 +43,33 @@ ready(() => {
 });
 
 ready(() => {
+    let partnersSlider = new Swiper('.swiper-container.parters-slider', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            disableOnInteraction: false
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true
+        },
+        breakpoints: {
+            1020: {
+                slidesPerView: 3,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            520: {
+                slidesPerView: 1,
+            },
+        }
+    });
+});
+
+ready(() => {
     let scrollToAnchor = () => {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {

@@ -62,6 +62,12 @@
   min-height: 100vh;
 }
 
+@media screen and (max-width: 1024px) {
+  .aboutus {
+    padding: 60px 0;
+  }
+}
+
 .aboutus .content {
   max-width: 500px;
   height: 600px;
@@ -77,6 +83,60 @@
   .aboutus .content {
     padding: 10px;
     height: auto;
+  }
+}
+
+.aboutus-wrapper {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutus .video {
+  position: relative;
+}
+
+@media screen and (max-width: 1024px) {
+  .aboutus .video {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .aboutus .video {
+    margin-top: 40px;
+  }
+}
+
+.aboutus .video::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 15%;
+  top: 15%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+@media screen and (max-width: 576px) {
+  .aboutus .video::before {
+    display: none;
+  }
+}
+
+.aboutus .video iframe {
+  width: 475px;
+  height: 268px;
+  vertical-align: bottom;
+  outline: 1px solid #000;
+}
+
+@media screen and (max-width: 576px) {
+  .aboutus .video iframe {
+    width: 100%;
+    height: 180px;
   }
 }
 
@@ -173,6 +233,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.courses .col-lg:not(:last-of-type),
+.courses .col-sm:not(:last-of-type) {
   margin-bottom: 30px;
 }
 
@@ -310,19 +374,20 @@
   margin-top: 10px;
 }
 
-.courses .course .title {
-  font-size: 42px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
+@media screen and (max-width: 576px) {
+  .courses .course-content {
+    padding: 10px;
+  }
 }
 
-.courses .course .duration {
+.courses .course .title {
+  font-size: 37px;
+  line-height: 1;
   margin-bottom: 10px;
 }
 
 .courses .course .value {
-  font-size: 26px;
+  font-size: 22px;
   font-weight: bold;
 }
 
@@ -378,123 +443,20 @@
   }
 }
 
-.preferences .section-content {
-  -webkit-box-pack: start !important;
-      -ms-flex-pack: start !important;
-          justify-content: flex-start !important;
-  padding-top: 10vh !important;
-}
-
-.preferences .row {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.preferences .title-primary {
-  margin-top: 4vh;
-  margin-bottom: 7vh;
-}
-
-.preferences .item {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 15px;
-  margin-right: 15px;
-  width: calc(25% - 30px);
-  max-width: 300px;
+.partners {
+  padding: 80px 0;
   text-align: center;
-  padding: 30px;
 }
 
-@media screen and (max-width: 768px) {
-  .preferences .item {
-    width: calc(50% - 30px);
+@media only screen and (max-width: 768px) {
+  .partners {
+    padding: 60px 0;
   }
 }
 
-@media screen and (max-width: 576px) {
-  .preferences .item {
-    width: calc(100% - 30px);
-  }
-}
-
-.preferences .item .icon {
-  width: 125px;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  margin: 0 auto;
-  margin-bottom: 15px;
-}
-
-.preferences .item .heading {
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.preferences .item .text {
-  font-size: 18px;
-  line-height: 1.5;
-  letter-spacing: 1px;
-}
-
-@media screen and (max-width: 1024px) {
-  .preferences .item .icon {
-    width: 110px;
-  }
-  .preferences .item .heading {
-    font-size: 29px;
-  }
-  .preferences .item .text {
-    font-size: 16px;
-    line-height: 1.3;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .preferences .item {
-    margin-bottom: 30px;
-  }
-}
-
-.partners .row {
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.partners .partner {
-  max-width: 350px;
-  width: 90%;
-  background: #f5f5f7;
-  padding: 40px 20px;
-  text-align: center;
-  color: #000;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 2px;
-}
-
-.partners .partner .title {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.partners .partner .text {
-  font-size: 19px;
-}
-
-@media screen and (max-width: 576px) {
-  .partners .partner {
-    margin-bottom: 30px;
-    padding: 25px 20px;
-  }
-  .partners .partner .title {
-    font-size: 27px;
-    margin-bottom: 10px;
-  }
-  .partners .partner .text {
-    font-size: 17px;
+@media only screen and (max-width: 768px) {
+  .partners {
+    padding: 30px 0;
   }
 }
 
@@ -791,6 +753,14 @@ footer.footer .nav-footer .links a:hover {
 @media only screen and (max-width: 768px) {
   .banner {
     padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .banner .title-secondary {
+    font-size: 25px;
+    line-height: 25px;
+    margin-bottom: 13px;
   }
 }
 /*# sourceMappingURL=main.css.map */
