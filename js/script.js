@@ -70,6 +70,161 @@ ready(() => {
 });
 
 ready(() => {
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 80,
+                "density": {
+                    "enable": true,
+                    "value_area": 800
+                }
+            },
+            "color": {
+                "value": "#ffffff"
+            },
+            "shape": {
+                "type": "circle",
+                "stroke": {
+                    "width": 0,
+                    "color": "#000000"
+                },
+                "polygon": {
+                    "nb_sides": 5
+                },
+                "image": {
+                    "src": "img/github.svg",
+                    "width": 100,
+                    "height": 100
+                }
+            },
+            "opacity": {
+                "value": 0.5,
+                "random": false,
+                "anim": {
+                    "enable": false,
+                    "speed": 1,
+                    "opacity_min": 0.1,
+                    "sync": false
+                }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": {
+                    "enable": false,
+                    "speed": 40,
+                    "size_min": 0.1,
+                    "sync": false
+                }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#ffffff",
+                "opacity": 0.4,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 6,
+                "direction": "none",
+                "random": false,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+                "attract": {
+                    "enable": false,
+                    "rotateX": 600,
+                    "rotateY": 1200
+                }
+            }
+        },
+        "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+                "onhover": {
+                    "enable": true,
+                    "mode": "grab"
+                },
+                "onclick": {
+                    "enable": true,
+                    "mode": "push"
+                },
+                "resize": true
+            },
+            "modes": {
+                "grab": {
+                    "distance": 400,
+                    "line_linked": {
+                        "opacity": 1
+                    }
+                },
+                "bubble": {
+                    "distance": 400,
+                    "size": 40,
+                    "duration": 2,
+                    "opacity": 8,
+                    "speed": 3
+                },
+                "repulse": {
+                    "distance": 200,
+                    "duration": 0.4
+                },
+                "push": {
+                    "particles_nb": 4
+                },
+                "remove": {
+                    "particles_nb": 2
+                }
+            }
+        },
+        "retina_detect": true
+    });
+});
+
+ready(() => {
+    const modalToggler = (buttonClass, modalClass) => {
+        let btn = document.querySelectorAll(buttonClass),
+            modal = document.querySelector(modalClass),
+            closetBtn = document.querySelector(`${modalClass} .close-btn`),
+            modalBackground = document.querySelector(`${modalClass} .modal-background`);
+
+       if(modal) {
+        btn.forEach(one => {
+            one.addEventListener('click', () => {
+                modal.classList.add('active');
+            });
+        });
+
+        [closetBtn, modalBackground].forEach(one => {
+            one.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+        });
+       }
+    }
+
+    modalToggler('.call-order-modal-btn', '.call-order');
+});
+
+ready(() => {
+    const callOrderForm = document.querySelector('.call-order .form');
+
+    callOrderForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        $.ajax({
+            method: "POST",
+            url: "../call-order.php",
+            data: $(callOrderForm).serialize(),
+        })
+        .done(function() {
+            callOrderForm.parentNode.classList.add('done');
+            callOrderForm.reset();
+        });
+    });
+});
+
+ready(() => {
     let scrollToAnchor = () => {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -86,7 +241,7 @@ ready(() => {
 })
 
 ready(() => {
-    const form = document.querySelector('.form');
+    const form = document.querySelector('#contacts .form');
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         $.ajax({
@@ -96,7 +251,7 @@ ready(() => {
             })
             .done(function() {
                 form.reset();
-                alert('Ваша заявка принята!')
+                alert('Ваша заявка принята!');
             });
     });
 });

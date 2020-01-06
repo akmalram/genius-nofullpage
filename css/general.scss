@@ -204,6 +204,11 @@ button {
     /* WebKit/Blink Browsers */
 }
 
+.logo-font,
+.logo {
+    font-family: 'Orbitron', sans-serif;
+}
+
 @mixin btn($bg, $color) {
     background: $bg;
     color: $color;

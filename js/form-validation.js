@@ -87,21 +87,21 @@ window.addEventListener('DOMContentLoaded', () => {
             }
             cleanClasses(nextel);
 
-            if(data.length == 0) {
-                disableForm();
-                nextel.classList.add('empty');
+            if (data.length != 0) {
 
-            }else if (!/.+@.+\..+/i.test(data)) {
-                disableForm();
-                nextel.classList.add('validEmail');
+                if (!/.+@.+\..+/i.test(data)) {
+                    disableForm();
+                    nextel.classList.add('validEmail');
 
-            }else if (data.length < 7) {
-                disableForm();
-                nextel.classList.add('length');
+                } else if (data.length < 7) {
+                    disableForm();
+                    nextel.classList.add('length');
 
-            } else {
-                enableForm();
-                cleanClasses();
+                } else {
+                    enableForm();
+                    cleanClasses();
+                }
+
             }
         });
     }
