@@ -29,19 +29,31 @@
   color: #fff;
 }
 
-.section {
+.courses,
+.banner,
+.partners,
+.smart-tashkent,
+.contacts {
   min-height: auto;
   margin: 80px auto;
 }
 
 @media screen and (max-width: 768px) {
-  .section {
+  .courses,
+  .banner,
+  .partners,
+  .smart-tashkent,
+  .contacts {
     margin: 50px auto;
   }
 }
 
 @media screen and (max-width: 576px) {
-  .section {
+  .courses,
+  .banner,
+  .partners,
+  .smart-tashkent,
+  .contacts {
     margin: 20px auto;
   }
 }
@@ -59,12 +71,21 @@
 }
 
 .aboutus {
-  min-height: 100vh;
+  margin-top: 100px;
+  margin-bottom: 200px;
 }
 
 @media screen and (max-width: 1024px) {
   .aboutus {
-    padding: 60px 0;
+    margin-top: 100px;
+    margin-bottom: 150px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .aboutus {
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 }
 
@@ -233,10 +254,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.courses .col-lg:not(:last-of-type),
-.courses .col-sm:not(:last-of-type) {
   margin-bottom: 30px;
 }
 
@@ -303,11 +320,15 @@
   transition: all 400ms ease;
   position: relative;
   border-radius: 3px;
+  -webkit-clip-path: polygon(25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0 75%, 0 25%);
+          clip-path: polygon(25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0 75%, 0 25%);
 }
 
 @media screen and (max-width: 1024px) {
   .courses .course {
     width: 100%;
+    -webkit-clip-path: none;
+            clip-path: none;
   }
 }
 

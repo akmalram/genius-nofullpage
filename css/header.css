@@ -113,6 +113,12 @@ canvas {
   background: #fff !important;
 }
 
+.navbar.scrolled.modalOpened .togglebtn .line,
+.navbar.scrolled.modalOpened .togglebtn .line::before,
+.navbar.scrolled.modalOpened .togglebtn .line::after {
+  background-color: #fff !important;
+}
+
 .navbar.scrolled {
   background: #fff;
   border-bottom: 2px solid #000;
@@ -132,6 +138,7 @@ canvas {
 .navbar .logo {
   position: relative;
   z-index: 110;
+  min-width: 200px;
 }
 
 .navbar .logo a {
@@ -147,10 +154,41 @@ canvas {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .navbar .logo {
+    min-width: auto;
+  }
+}
+
 .navbar .navbar-title {
   font-size: 30px;
   -webkit-transition: all 800ms ease;
   transition: all 800ms ease;
+  text-align: center;
+  min-width: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .navbar-title {
+    min-width: auto;
+    display: none;
+  }
+}
+
+.navbar .menu {
+  min-width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .menu {
+    min-width: auto;
+  }
 }
 
 .navbar .menu-modal {

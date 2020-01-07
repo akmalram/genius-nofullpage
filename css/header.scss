@@ -76,6 +76,7 @@ canvas {
     color: #fff;
     z-index: 1111;
     transition: all .5s ease;
+
     &.modalOpened {
         .logo a {
             color: #fff !important;
@@ -86,6 +87,15 @@ canvas {
             background: #fff !important;
         }
     }
+
+    &.scrolled.modalOpened {
+        .togglebtn .line,
+        .togglebtn .line::before,
+        .togglebtn .line::after {
+            background-color: #fff !important;
+        }
+    }
+
     &.scrolled {
         background: #fff;
         border-bottom: 2px solid #000;
@@ -99,9 +109,12 @@ canvas {
             background-color: #000 !important;
         }
     }
+
     .logo {
         position: relative;
         z-index: 110;
+        min-width: 200px;
+
         a {
             font-size: 44px;
             color: #fff;
@@ -110,11 +123,34 @@ canvas {
                 font-size: 27px;
             }
         }
+
+        @include sm-block {
+            min-width: auto;
+        }
     }
+
     .navbar-title {
         font-size: 30px;
         transition: all 800ms ease;
+        text-align: center;
+        min-width: 200px;
+
+        @include sm-block {
+            min-width: auto;
+            display: none;
+        }
     }
+
+    .menu {
+        min-width: 200px;
+        display: flex;
+        justify-content: flex-end;
+
+        @include sm-block {
+            min-width: auto;
+        }
+    }
+
     .menu-modal {
         position: fixed;
         left: 0;
