@@ -168,6 +168,7 @@ $blue-color: #003A9D;
             transform: translate(0, 0);
             background: none;
             padding: 0;
+            border: none;
         }
     }
 }
@@ -230,8 +231,16 @@ $blue-color: #003A9D;
         transition: all 200ms;
         text-align: left;
 
+        .title-secondary {
+            margin: 0;
+        }
+
         .pr {
             font-size: 20px;
+
+            @include xs-block {
+                font-size: 14px;
+            }
         }
 
         .heading {
@@ -243,17 +252,30 @@ $blue-color: #003A9D;
         .right {
             width: 40%;
             margin-top: 20px;
+
+            @include xs-block {
+                width: 100%;
+                margin-top: 0;
+            }
         }
 
         .prop {
             font-size: 22px;
             padding-left: 10px;
             font-weight: 700;
+
+            @include xs-block {
+                font-size: 16px;
+            }
         }
 
         .value {
             padding-left: 25px;
             font-size: 22px;
+
+            @include xs-block {
+                font-size: 15px;
+            }
         }
     }
 
@@ -402,6 +424,16 @@ $blue-color: #003A9D;
 
 .partners {
     text-align: center;
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            max-height: 100px;
+        }
+    }
 }
 
 .contacts {
@@ -613,7 +645,7 @@ footer.footer {
     @include content-padding();
     background: url(../img/banner-brain-bg.jpg) no-repeat center center;
     background-size: cover;
-    box-shadow: inset 0 0 0 10000px rgba($color: #000, $alpha: .4);
+    // box-shadow: inset 0 0 0 10000px rgba($color: #000, $alpha: .4);
     min-height: 300px;
     background-attachment: fixed;
     color: #fff;

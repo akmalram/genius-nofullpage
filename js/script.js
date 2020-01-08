@@ -275,12 +275,28 @@ ready(() => {
         $.ajax({
                 method: "POST",
                 url: "../send.php",
-                data: $('.form').serialize(),
+                data: $(form).serialize(),
             })
             .done(function() {
                 form.reset();
                 alert('Ваша заявка принята!');
             });
+    });
+
+    const courseforms = document.querySelectorAll('.course-form');
+    courseforms.forEach(one => {
+        one.addEventListener('submit', (e) => {
+            e.preventDefault();
+            $.ajax({
+                    method: "POST",
+                    url: "../call-order.php",
+                    data: $(one).serialize(),
+                })
+                .done(function() {
+                    one.reset();
+                    alert('Ваша заявка принята!');
+                });
+        });
     });
 });
 
