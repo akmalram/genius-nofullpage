@@ -130,19 +130,20 @@
   }
 }
 
-.aboutus .video::before {
-  content: "";
+.aboutus .video .background {
   position: absolute;
   width: 100%;
   height: 100%;
   left: 15%;
   top: 15%;
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--primary-color);
   z-index: -1;
+  -webkit-transition: all s3s ease;
+  transition: all s3s ease;
 }
 
 @media screen and (max-width: 576px) {
-  .aboutus .video::before {
+  .aboutus .video .background {
     display: none;
   }
 }

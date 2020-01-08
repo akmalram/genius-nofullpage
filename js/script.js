@@ -263,6 +263,64 @@ ready(() => {
     });
 });
 
+// ready(() => {
+//     const parallax = (e, elem) => {
+//         let _w = window.innerWidth/2;
+//         let _h = window.innerHeight/2;
+//         let _mouseX = e.clientX;
+//         let _mouseY = e.clientY;
+//         let _depth1 = `${50 - (_mouseX - _w) * 0.01}px, ${50 - (_mouseY - _h) * 0.01}px`;
+//         let _depth2 = `${50 - (_mouseX - _w) * 0.02}px, ${50 - (_mouseY - _h) * 0.02}px`;
+//         let _depth3 = `${50 - (_mouseX - _w) * 0.06}px, ${50 - (_mouseY - _h) * 0.06}px`;
+//         let x = ` ${_depth1}`;
+//         elem.style.cssText = `transform: translate(${_depth3})`;
+//     }
+
+//     const el = document.querySelector('#aboutus .video .background');
+//     window.addEventListener('mousemove', e => {
+//         parallax(e, el)
+//     });
+// });
+
+ready(() => {
+    const parallax = (el) => {
+        let lFollowX = 0,
+            lFollowY = 0,
+            x = 0,
+            y = 0,
+            friction = 1 / 15;
+
+        function moveBackground() {
+            x += (lFollowX - x) * friction;
+            y += (lFollowY - y) * friction;
+
+            translate = 'translate(' + x.toFixed(3) + 'px, ' + y.toFixed(3) + 'px)';
+
+
+            $(el).css({
+                '-webit-transform': translate,
+                '-moz-transform': translate,
+                'transform': translate
+            });
+
+            window.requestAnimationFrame(moveBackground);
+        }
+
+        $(window).on('mousemove click', function (e) {
+
+            let lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+            let lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+            lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+            lFollowY = (10 * lMouseY) / 100;
+
+        });
+
+        moveBackground();
+    }
+
+    parallax('#aboutus .video .background');
+});
+
 const fontAwesomeFreeObserver = new FontFaceObserver('Font Awesome 5 Free');
 const fontAwesomeBrandsObserver = new FontFaceObserver('Font Awesome 5 Brands');
 const gilroyObserver = new FontFaceObserver('Gilroy');
