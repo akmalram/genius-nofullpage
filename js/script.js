@@ -190,28 +190,49 @@ ready(() => {
             modalBackground = document.querySelector(`${modalClass} .modal-background`),
             targetInput = document.querySelector(`${modalClass} input[name="hidden"]`);
 
-        let addTargetTo = (to, value) => {
-            to.setAttribute('value', value);
+        if (modal) {
+            btn.forEach(one => {
+                one.addEventListener('click', () => {
+                    modal.classList.add('active');
+                    targetInput.setAttribute('value', one.getAttribute('data-modal-target'));
+                });
+            });
+
+            [closetBtn, modalBackground].forEach(one => {
+                one.addEventListener('click', () => {
+                    modal.classList.remove('active');
+                });
+            });
         }
+    }
 
-       if(modal) {
-        btn.forEach(one => {
-            one.addEventListener('click', () => {
-                modal.classList.add('active');
-                targetInput.setAttribute('value', one.getAttribute('data-modal-target'));
-                console.log(one)
-            });
-        });
+    const courseModalToggler = (buttonClass, modalClass) => {
+        let btn = document.querySelectorAll(buttonClass),
+            modal = document.querySelector(modalClass),
+            closetBtn = document.querySelector(`${modalClass} .close-btn`),
+            modalBackground = document.querySelector(`${modalClass} .modal-background`);
 
-        [closetBtn, modalBackground].forEach(one => {
-            one.addEventListener('click', () => {
-                modal.classList.remove('active');
+        if (modal) {
+            btn.forEach(one => {
+                one.addEventListener('click', () => {
+                    modal.classList.add('active');
+                    modal.setAttribute('data-course-active', one.getAttribute('data-modal-course'));
+                });
             });
-        });
-       }
+
+            [closetBtn, modalBackground].forEach(one => {
+                one.addEventListener('click', () => {
+                    modal.classList.remove('active');
+                    modal.setAttribute('data-course-active', '');
+
+                });
+            });
+        }
     }
 
     modalToggler('.call-order-modal-btn', '.call-order');
+
+    courseModalToggler('.course-modal-btn', '.course-modal');
 });
 
 ready(() => {
@@ -263,27 +284,8 @@ ready(() => {
     });
 });
 
-// ready(() => {
-//     const parallax = (e, elem) => {
-//         let _w = window.innerWidth/2;
-//         let _h = window.innerHeight/2;
-//         let _mouseX = e.clientX;
-//         let _mouseY = e.clientY;
-//         let _depth1 = `${50 - (_mouseX - _w) * 0.01}px, ${50 - (_mouseY - _h) * 0.01}px`;
-//         let _depth2 = `${50 - (_mouseX - _w) * 0.02}px, ${50 - (_mouseY - _h) * 0.02}px`;
-//         let _depth3 = `${50 - (_mouseX - _w) * 0.06}px, ${50 - (_mouseY - _h) * 0.06}px`;
-//         let x = ` ${_depth1}`;
-//         elem.style.cssText = `transform: translate(${_depth3})`;
-//     }
-
-//     const el = document.querySelector('#aboutus .video .background');
-//     window.addEventListener('mousemove', e => {
-//         parallax(e, el)
-//     });
-// });
-
 ready(() => {
-    const parallax = (el) => {
+    const parallax = (el, reverse) => {
         let lFollowX = 0,
             lFollowY = 0,
             x = 0,
@@ -291,8 +293,13 @@ ready(() => {
             friction = 1 / 15;
 
         function moveBackground() {
-            x += (lFollowX - x) * friction;
-            y += (lFollowY - y) * friction;
+            if(reverse) {
+                x -= (lFollowX + x) * friction;
+                y -= (lFollowY + y) * friction;
+            } else {
+                x += (lFollowX - x) * friction;
+                y += (lFollowY - y) * friction;
+            }
 
             translate = 'translate(' + x.toFixed(3) + 'px, ' + y.toFixed(3) + 'px)';
 
@@ -319,6 +326,7 @@ ready(() => {
     }
 
     parallax('#aboutus .video .background');
+    parallax('#aboutus .content .background', true);
 });
 
 const fontAwesomeFreeObserver = new FontFaceObserver('Font Awesome 5 Free');
