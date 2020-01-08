@@ -634,7 +634,6 @@
 .contacts .map iframe {
   width: 90%;
   display: block;
-  margin: 0 auto;
   height: 30vh;
   border-radius: 3px;
   border: 2px solid #f7a024;
@@ -643,6 +642,7 @@
 @media screen and (max-width: 576px) {
   .contacts .map iframe {
     height: 200px;
+    margin: 0 auto;
   }
 }
 

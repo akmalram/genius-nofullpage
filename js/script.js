@@ -28,16 +28,16 @@ ready(() => {
 ready(() => {
     const element = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 200) {
+        if (window.scrollY > 50) {
             element.classList.add('scrolled');
-        } else if (window.scrollY < 200) {
+        } else if (window.scrollY < 50) {
             element.classList.remove('scrolled');
         }
     });
 
-    if (window.scrollY > 200) {
+    if (window.scrollY > 50) {
         element.classList.add('scrolled');
-    } else if (window.scrollY < 200) {
+    } else if (window.scrollY < 50) {
         element.classList.remove('scrolled');
     }
 });
@@ -187,12 +187,19 @@ ready(() => {
         let btn = document.querySelectorAll(buttonClass),
             modal = document.querySelector(modalClass),
             closetBtn = document.querySelector(`${modalClass} .close-btn`),
-            modalBackground = document.querySelector(`${modalClass} .modal-background`);
+            modalBackground = document.querySelector(`${modalClass} .modal-background`),
+            targetInput = document.querySelector(`${modalClass} input[name="hidden"]`);
+
+        let addTargetTo = (to, value) => {
+            to.setAttribute('value', value);
+        }
 
        if(modal) {
         btn.forEach(one => {
             one.addEventListener('click', () => {
                 modal.classList.add('active');
+                targetInput.setAttribute('value', one.getAttribute('data-modal-target'));
+                console.log(one)
             });
         });
 

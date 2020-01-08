@@ -463,12 +463,12 @@ $blue-color: #003A9D;
         iframe {
             width: 90%;
             display: block;
-            margin: 0 auto;
             height: 30vh;
             border-radius: 3px;
             border: 2px solid #f7a024;
             @include xs-block {
                 height: 200px;
+                margin: 0 auto;
             }
         }
     }
