@@ -225,56 +225,79 @@ $blue-color: #003A9D;
         }
     }
 
-    .modal .course-info {
-        visibility: hidden;
-        display: none;
-        transition: all 200ms;
-        text-align: left;
-
-        .title-secondary {
-            margin: 0;
+    .modal {
+        &-content {
+            padding: 13px 20px;
         }
 
-        .pr {
-            font-size: 20px;
+        .course-info {
+            visibility: hidden;
+            display: none;
+            transition: all 200ms;
+            text-align: left;
 
-            @include xs-block {
-                font-size: 14px;
+            .title-secondary {
+                margin: 0;
+                margin-bottom: 10px;
             }
-        }
 
-        .heading {
-            margin-bottom: 10px;
-            font-size: 21px;
-        }
+            .pr {
+                font-size: 18px;
+                padding: 15px;
+                box-sizing: border-box;
+                background: #f1f1f1;
 
-        .left,
-        .right {
-            width: 40%;
-            margin-top: 20px;
+                @include sm-block {
+                    font-size: 16px;
+                }
 
-            @include xs-block {
-                width: 100%;
-                margin-top: 0;
+                @include xs-block {
+                    font-size: 14px;
+                    max-height: 300px;
+                    overflow-x: scroll;
+                }
             }
-        }
 
-        .prop {
-            font-size: 22px;
-            padding-left: 10px;
-            font-weight: 700;
-
-            @include xs-block {
-                font-size: 16px;
+            .heading {
+                margin-bottom: 10px;
+                font-size: 21px;
             }
-        }
 
-        .value {
-            padding-left: 25px;
-            font-size: 22px;
+            .left,
+            .right {
+                width: 40%;
+                margin-top: 20px;
 
-            @include xs-block {
-                font-size: 15px;
+                @include xs-block {
+                    width: 100%;
+                    margin-top: 0;
+                }
+            }
+
+            .prop {
+                font-size: 22px;
+                font-weight: 700;
+
+                @include sm-block {
+                    font-size: 18px;
+                }
+
+                @include xs-block {
+                    font-size: 16px;
+                }
+            }
+
+            .value {
+                padding-left: 25px;
+                font-size: 12px;
+
+                @include sm-block {
+                    font-size: 18px;
+                }
+
+                @include xs-block {
+                    font-size: 15px;
+                }
             }
         }
     }

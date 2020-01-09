@@ -346,6 +346,10 @@
   }
 }
 
+.courses .modal-content {
+  padding: 13px 20px;
+}
+
 .courses .modal .course-info {
   visibility: hidden;
   display: none;
@@ -356,15 +360,28 @@
 
 .courses .modal .course-info .title-secondary {
   margin: 0;
+  margin-bottom: 10px;
 }
 
 .courses .modal .course-info .pr {
-  font-size: 20px;
+  font-size: 18px;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #f1f1f1;
+}
+
+@media screen and (max-width: 768px) {
+  .courses .modal .course-info .pr {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 576px) {
   .courses .modal .course-info .pr {
     font-size: 14px;
+    max-height: 300px;
+    overflow-x: scroll;
   }
 }
 
@@ -389,8 +406,13 @@
 
 .courses .modal .course-info .prop {
   font-size: 22px;
-  padding-left: 10px;
   font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+  .courses .modal .course-info .prop {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -401,7 +423,13 @@
 
 .courses .modal .course-info .value {
   padding-left: 25px;
-  font-size: 22px;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .courses .modal .course-info .value {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 576px) {
