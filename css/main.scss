@@ -296,14 +296,14 @@ $blue-color: #003A9D;
 
             .value {
                 padding-left: 25px;
-                font-size: 12px;
+                font-size: 18px;
 
                 @include sm-block {
                     font-size: 18px;
                 }
 
                 @include xs-block {
-                    font-size: 15px;
+                    font-size: 12px;
                 }
             }
         }
