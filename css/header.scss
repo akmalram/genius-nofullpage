@@ -135,6 +135,7 @@ canvas {
                 transition: color .2s ease-in-out;
                 box-sizing: border-box;
                 line-height: 1;
+                transition: all .2s ease-in-out;
 
                 @include sm-block {
                     font-size: 17px;
@@ -143,10 +144,10 @@ canvas {
                 @include xs-block {
                     display: inline-block;
                     font-size: 18px;
-                    border: 2px solid #000;
+                    border: 2px solid #fff;
                     border-radius: 3px;
                     padding: 4px 6px;
-                    color: #000;
+                    color: #fff;
                 }
 
                 &:hover {
@@ -184,6 +185,10 @@ canvas {
         .logo a,
         .navbar-contacts .phone-call a {
             color: #000;
+        }
+
+        .navbar-contacts .phone-call a {
+            border-color: #000;
         }
 
         .togglebtn .line,

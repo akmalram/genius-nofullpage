@@ -177,6 +177,8 @@ canvas {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   line-height: 1;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
@@ -189,10 +191,10 @@ canvas {
   .navbar-contacts .phone-call a {
     display: inline-block;
     font-size: 18px;
-    border: 2px solid #000;
+    border: 2px solid #fff;
     border-radius: 3px;
     padding: 4px 6px;
-    color: #000;
+    color: #fff;
   }
 }
 
@@ -225,6 +227,10 @@ canvas {
 .navbar.scrolled .logo a,
 .navbar.scrolled .navbar-contacts .phone-call a {
   color: #000;
+}
+
+.navbar.scrolled .navbar-contacts .phone-call a {
+  border-color: #000;
 }
 
 .navbar.scrolled .togglebtn .line,
