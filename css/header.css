@@ -102,6 +102,97 @@ canvas {
   transition: all .5s ease;
 }
 
+.navbar-contacts {
+  text-align: center;
+  max-width: 33.333%;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-contacts {
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.navbar-contacts .telegram a {
+  font-size: 16px;
+  padding: 4px 6px;
+  background-color: #0dace8;
+  color: #fff;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  border: 2px solid #0dace8;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-contacts .telegram a {
+    padding: 4px 6px;
+    font-size: 18px;
+  }
+}
+
+.navbar-contacts .telegram a:hover {
+  background-color: #fff;
+  color: #0dace8;
+}
+
+.navbar-contacts .phone-call {
+  margin-bottom: 3px;
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-contacts .phone-call {
+    margin-bottom: 0;
+    margin-right: 5px;
+  }
+}
+
+.navbar-contacts .phone-call a {
+  font-size: 19px;
+  color: #fff;
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-contacts .phone-call a {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-contacts .phone-call a {
+    display: inline-block;
+    font-size: 18px;
+    border: 2px solid #000;
+    border-radius: 3px;
+    padding: 4px 6px;
+    color: #000;
+  }
+}
+
+.navbar-contacts .phone-call a:hover {
+  text-decoration: underline;
+}
+
 .navbar.modalOpened .logo a {
   color: #fff !important;
 }
@@ -124,7 +215,7 @@ canvas {
 }
 
 .navbar.scrolled .logo a,
-.navbar.scrolled .navbar-title {
+.navbar.scrolled .navbar-contacts .phone-call a {
   color: #000;
 }
 
@@ -153,38 +244,17 @@ canvas {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .navbar .logo {
     min-width: auto;
   }
 }
 
-.navbar .navbar-title {
-  font-size: 30px;
-  -webkit-transition: all 800ms ease;
-  transition: all 800ms ease;
-  text-align: center;
-  min-width: 200px;
-}
-
-@media screen and (max-width: 768px) {
-  .navbar .navbar-title {
-    min-width: auto;
-    display: none;
-  }
-}
-
 .navbar .menu {
   min-width: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 576px) {
   .navbar .menu {
     min-width: auto;
   }

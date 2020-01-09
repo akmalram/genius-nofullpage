@@ -76,6 +76,77 @@ canvas {
     z-index: 1111;
     transition: all .5s ease;
 
+    &-contacts {
+        text-align: center;
+        max-width: 33.333%;
+
+        @include sm-block {
+            text-align: right;
+        }
+
+        @include xs-block {
+            display: flex;
+            align-items: center;
+        }
+
+        .telegram a {
+            font-size: 16px;
+            padding: 4px 6px;
+            background-color: #0dace8;
+            color: #fff;
+            transition: all .2s ease-in-out;
+            cursor: pointer;
+            box-sizing: border-box;
+            display: inline-block;
+            border: 2px solid #0dace8;
+            border-radius: 3px;
+
+            @include xs-block {
+                padding: 4px 6px;
+                font-size: 18px;
+            }
+
+            &:hover {
+                background-color: #fff;
+                color: #0dace8;
+            }
+        }
+
+        .phone-call {
+            margin-bottom: 3px;
+
+            @include xs-block {
+                margin-bottom: 0;
+                margin-right: 5px;
+            }
+
+            a {
+                font-size: 19px;
+                color: #fff;
+                transition: color .2s ease-in-out;
+                box-sizing: border-box;
+                line-height: 1;
+
+                @include sm-block {
+                    font-size: 17px;
+                }
+
+                @include xs-block {
+                    display: inline-block;
+                    font-size: 18px;
+                    border: 2px solid #000;
+                    border-radius: 3px;
+                    padding: 4px 6px;
+                    color: #000;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
     &.modalOpened {
         .logo a {
             color: #fff !important;
@@ -99,7 +170,7 @@ canvas {
         background: #fff;
         border-bottom: 2px solid #000;
         .logo a,
-        .navbar-title {
+        .navbar-contacts .phone-call a {
             color: #000;
         }
         .togglebtn .line,
@@ -123,29 +194,15 @@ canvas {
             }
         }
 
-        @include sm-block {
+        @include xs-block {
             min-width: auto;
-        }
-    }
-
-    .navbar-title {
-        font-size: 30px;
-        transition: all 800ms ease;
-        text-align: center;
-        min-width: 200px;
-
-        @include sm-block {
-            min-width: auto;
-            display: none;
         }
     }
 
     .menu {
         min-width: 200px;
-        display: flex;
-        justify-content: flex-end;
 
-        @include sm-block {
+        @include xs-block {
             min-width: auto;
         }
     }
@@ -216,6 +273,7 @@ canvas {
             }
         }
     }
+
     .menu-toggler {
         z-index: 110;
         position: relative;
