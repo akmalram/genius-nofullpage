@@ -253,7 +253,7 @@ $blue-color: #003A9D;
 
                 @include xs-block {
                     font-size: 14px;
-                    max-height: 300px;
+                    max-height: 100px;
                     overflow-x: scroll;
                 }
             }
