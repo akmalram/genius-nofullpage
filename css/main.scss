@@ -400,14 +400,13 @@ $blue-color: #003A9D;
         }
     }
 
-    .icon {
-        width: 40px;
-        margin-right: 10px;
-    }
-
     .with-icon {
         display: flex;
-        align-items: center;
+
+        .icon {
+            width: 35px;
+            margin-right: 10px;
+        }
     }
 
     @include md-block {

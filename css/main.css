@@ -579,18 +579,15 @@
   font-weight: bold;
 }
 
-.courses .icon {
-  width: 40px;
-  margin-right: 10px;
-}
-
 .courses .with-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.courses .with-icon .icon {
+  width: 35px;
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 1024px) {
