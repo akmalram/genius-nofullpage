@@ -253,8 +253,9 @@ $blue-color: #003A9D;
 
                 @include xs-block {
                     font-size: 14px;
-                    max-height: 100px;
+                    max-height: 120px;
                     overflow-x: scroll;
+                    margin-bottom: 5px;
                 }
             }
 
@@ -271,6 +272,12 @@ $blue-color: #003A9D;
                 @include xs-block {
                     width: 100%;
                     margin-top: 0;
+                }
+            }
+
+            .course-form {
+                @include sm-block {
+                    text-align: center;
                 }
             }
 
