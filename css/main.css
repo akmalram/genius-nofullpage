@@ -193,8 +193,8 @@
 
 @media screen and (max-width: 576px) {
   .aboutus .img {
-    -webkit-transform: translate(-13px, -27px);
-            transform: translate(-13px, -27px);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
 }
 
@@ -205,8 +205,8 @@
 
 @media screen and (max-width: 576px) {
   .aboutus .title-primary {
-    -webkit-transform: translate(-23px, -12px);
-            transform: translate(-23px, -12px);
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
   }
 }
 

@@ -327,6 +327,6 @@ button {
 }
 
 .pulse-purple {
-    @include pulse($violet-color, 20px, violet);
+    @include pulse($violet-color, 10px, violet);
 }
 

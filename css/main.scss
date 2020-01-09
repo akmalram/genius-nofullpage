@@ -136,7 +136,7 @@ $blue-color: #003A9D;
         }
 
         @include xs-block {
-            transform: translate(-13px, -27px);
+            transform: translate(0px, 0px);
         }
     }
 
@@ -144,7 +144,7 @@ $blue-color: #003A9D;
         transform: translate(-54px, -57px);
 
         @include xs-block {
-            transform: translate(-23px, -12px);
+            transform: translate(0px, 0px);
         }
     }
 
