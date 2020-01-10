@@ -220,8 +220,8 @@ canvas {
 
 .navbar.scrolled {
   background: white;
-  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.26);
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.26);
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.05);
 }
 
 .navbar.scrolled .logo a,

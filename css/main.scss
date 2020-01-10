@@ -1,6 +1,6 @@
 @import './mixins';
 @import './smart-grid';
-$primary-color: #F7A024;
+$primary-color: #33C1B5;
 $violet-color: #231E60;
 $yellow-color: #E1C65D;
 $blue-color: #003A9D;
@@ -133,6 +133,7 @@ $blue-color: #003A9D;
 
         @include sm-block {
             transform: translate(-48px, -66px);
+            margin-bottom: 5px;
         }
 
         @include xs-block {
@@ -142,6 +143,10 @@ $blue-color: #003A9D;
 
     .title-primary {
         transform: translate(-54px, -57px);
+
+        @include sm-block {
+            margin-bottom: 10px;
+        }
 
         @include xs-block {
             transform: translate(0px, 0px);
@@ -253,7 +258,7 @@ $blue-color: #003A9D;
 
                 @include xs-block {
                     font-size: 14px;
-                    max-height: 120px;
+                    max-height: 150px;
                     overflow-x: scroll;
                     margin-bottom: 5px;
                 }
@@ -318,6 +323,12 @@ $blue-color: #003A9D;
             }
         }
     }
+
+
+    .wrap:hover {
+        animation: pulse-drop 2s linear infinite;
+    }
+
 
     .course {
         display: block;
@@ -448,6 +459,26 @@ $blue-color: #003A9D;
                 font-size: 16px;
             }
         }
+    }
+}
+
+@keyframes pulse-drop {
+    0% {
+        filter: drop-shadow(0 0 0  rgba(#f7a024, 1));
+    }
+
+    40% {
+        filter: drop-shadow(0 0 10px rgba(#f7a024, 1));
+
+    }
+
+    80% {
+        filter: drop-shadow(0 0 20px rgba(#f7a024, 0));
+
+    }
+
+    100% {
+        filter: drop-shadow(0 0 0 0 rgba(#f7a024, 0));
     }
 }
 
@@ -670,41 +701,6 @@ footer.footer {
     }
 }
 
-// @keyframes drop-pulse {
-//     0% {
-//         filter: drop-shadow(0px 0px 0px 100px rgba(0, 0, 0, 0.5));
-//     }
-//     0% {
-//         box-shadow: 0 0 0 0 rgba($color, .8);
-//     }
-
-//     10% {
-//         transform: scale(1.05);
-//     }
-
-//     20% {
-//         transform: scale(1.05);
-//     }
-
-//     25% {
-//         transform: scale(1);
-//     }
-
-//     40% {
-//         box-shadow: 0 0 0px #{$width / 2} rgba($color, .5);
-
-//     }
-
-//     80% {
-//         box-shadow: 0 0 3px #{$width} rgba($color, 0);
-
-//     }
-
-//     100% {
-//         box-shadow: 0 0 0 0 rgba($color, 0);
-//     }
-// }
-
 .banner {
     @include content-padding();
     background: url(../img/banner-brain-bg.jpg) no-repeat center center;
@@ -770,6 +766,12 @@ footer.footer {
 
         &.big {
             width: 1000px;
+            align-self: flex-end;
+            margin-bottom: 10vh;
+
+            @include sm-block {
+                margin-bottom: 5vh;
+            }
         }
     }
 

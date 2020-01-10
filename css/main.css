@@ -188,6 +188,7 @@
   .aboutus .img {
     -webkit-transform: translate(-48px, -66px);
             transform: translate(-48px, -66px);
+    margin-bottom: 5px;
   }
 }
 
@@ -201,6 +202,12 @@
 .aboutus .title-primary {
   -webkit-transform: translate(-54px, -57px);
           transform: translate(-54px, -57px);
+}
+
+@media screen and (max-width: 768px) {
+  .aboutus .title-primary {
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -380,7 +387,7 @@
 @media screen and (max-width: 576px) {
   .courses .modal .course-info .pr {
     font-size: 14px;
-    max-height: 120px;
+    max-height: 150px;
     overflow-x: scroll;
     margin-bottom: 5px;
   }
@@ -473,6 +480,11 @@
 .courses .modal[data-course-active="course-6"] .course-6 {
   visibility: visible;
   display: block;
+}
+
+.courses .wrap:hover {
+  -webkit-animation: pulse-drop 2s linear infinite;
+          animation: pulse-drop 2s linear infinite;
 }
 
 .courses .course {
@@ -625,6 +637,44 @@
   }
   .courses .course .value {
     font-size: 16px;
+  }
+}
+
+@-webkit-keyframes pulse-drop {
+  0% {
+    -webkit-filter: drop-shadow(0 0 0 #f7a024);
+            filter: drop-shadow(0 0 0 #f7a024);
+  }
+  40% {
+    -webkit-filter: drop-shadow(0 0 10px #f7a024);
+            filter: drop-shadow(0 0 10px #f7a024);
+  }
+  80% {
+    -webkit-filter: drop-shadow(0 0 20px rgba(247, 160, 36, 0));
+            filter: drop-shadow(0 0 20px rgba(247, 160, 36, 0));
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 0 0 0 rgba(247, 160, 36, 0));
+            filter: drop-shadow(0 0 0 0 rgba(247, 160, 36, 0));
+  }
+}
+
+@keyframes pulse-drop {
+  0% {
+    -webkit-filter: drop-shadow(0 0 0 #f7a024);
+            filter: drop-shadow(0 0 0 #f7a024);
+  }
+  40% {
+    -webkit-filter: drop-shadow(0 0 10px #f7a024);
+            filter: drop-shadow(0 0 10px #f7a024);
+  }
+  80% {
+    -webkit-filter: drop-shadow(0 0 20px rgba(247, 160, 36, 0));
+            filter: drop-shadow(0 0 20px rgba(247, 160, 36, 0));
+  }
+  100% {
+    -webkit-filter: drop-shadow(0 0 0 0 rgba(247, 160, 36, 0));
+            filter: drop-shadow(0 0 0 0 rgba(247, 160, 36, 0));
   }
 }
 
@@ -1007,6 +1057,15 @@ footer.footer .nav-footer .links a:hover {
 
 .modal-content.big {
   width: 1000px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 10vh;
+}
+
+@media screen and (max-width: 768px) {
+  .modal-content.big {
+    margin-bottom: 5vh;
+  }
 }
 
 .modal-content .done {
