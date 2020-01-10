@@ -1,6 +1,11 @@
 @import './mixins';
 @import './smart-grid';
 
+$primary-color: #2BB5B8;
+$violet-color: #231E60;
+$yellow-color: #E1C65D;
+$blue-color: #003A9D;
+
 header {
     color: #fff;
     min-height: 100vh;
@@ -32,7 +37,7 @@ header {
     }
 
     .btn-primary {
-        background: var(--violet-color);
+        background: $primary-color;
     }
 
     @include sm-block {

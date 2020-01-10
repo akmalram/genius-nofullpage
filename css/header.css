@@ -41,7 +41,7 @@ header .header-content {
 }
 
 header .btn-primary {
-  background: var(--violet-color);
+  background: #2BB5B8;
 }
 
 @media screen and (max-width: 768px) {
