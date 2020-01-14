@@ -340,6 +340,24 @@ ready(() => {
     parallax('#aboutus .content .background', true);
 });
 
+ready(() => {
+    const loadData = (url, field, selector) => {
+        let req = fetch(url)
+            .then(data => data.json())
+            .then(parsedData => {
+                document.querySelector(selector).innerHTML = parsedData[field];
+            });
+    }
+
+    loadData('../data/data.json', 'main_text', '#main_text');
+    loadData('../data/data.json', 'course-1-text', '#course-1-text');
+    loadData('../data/data.json', 'course-2-text', '#course-2-text');
+    loadData('../data/data.json', 'course-3-text', '#course-3-text');
+    loadData('../data/data.json', 'course-4-text', '#course-4-text');
+    loadData('../data/data.json', 'course-5-text', '#course-5-text');
+    loadData('../data/data.json', 'course-6-text', '#course-6-text');
+});
+
 const fontAwesomeFreeObserver = new FontFaceObserver('Font Awesome 5 Free');
 const fontAwesomeBrandsObserver = new FontFaceObserver('Font Awesome 5 Brands');
 const gilroyObserver = new FontFaceObserver('Gilroy');

@@ -41,7 +41,7 @@ header .header-content {
 }
 
 header .btn-primary {
-  background: #2BB5B8;
+  background: #2792de;
 }
 
 @media screen and (max-width: 768px) {
@@ -146,7 +146,17 @@ canvas {
 
 @media screen and (max-width: 576px) {
   .navbar-contacts .telegram a {
-    padding: 4px 6px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 33px;
+    height: 33px;
     font-size: 18px;
   }
 }
@@ -189,11 +199,20 @@ canvas {
 
 @media screen and (max-width: 576px) {
   .navbar-contacts .phone-call a {
-    display: inline-block;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 33px;
+    height: 33px;
     font-size: 18px;
     border: 2px solid #fff;
     border-radius: 3px;
-    padding: 4px 6px;
     color: #fff;
   }
 }
