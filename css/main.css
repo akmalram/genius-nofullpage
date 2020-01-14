@@ -104,7 +104,7 @@
   height: 100%;
   left: 0;
   top: 0;
-  background: #2792de;
+  background: #F2C879;
   z-index: -1;
   -webkit-transition: all s3s ease;
   transition: all s3s ease;
@@ -145,7 +145,7 @@
   height: 100%;
   left: 15%;
   top: 15%;
-  background: #2792de;
+  background: #F2C879;
   z-index: -1;
   -webkit-transition: all s3s ease;
   transition: all s3s ease;
@@ -215,8 +215,8 @@
   -webkit-transform: translate(93px, -26px);
           transform: translate(93px, -26px);
   background: rgba(255, 255, 255, 0.8);
-  border-right: 2px solid #2792de;
-  border-bottom: 2px solid #2792de;
+  border-right: 2px solid #F2C879;
+  border-bottom: 2px solid #F2C879;
   border-radius: 0 6px 6px 6px;
   padding: 20px;
 }
@@ -259,7 +259,7 @@
 }
 
 .courses .btn-primary {
-  background: #2792de;
+  background: #F2C879;
 }
 
 .courses .row {
@@ -1047,7 +1047,7 @@
 }
 
 footer.footer {
-  background: #2792de;
+  background: #F2C879;
   padding: 60px 30px;
 }
 
