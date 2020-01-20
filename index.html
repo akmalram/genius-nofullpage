@@ -12,15 +12,15 @@
     <!-- Css styles -->
     <link href="https://fonts.googleapis.com/css?family=Orbitron:600&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css'/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/header.css">
     <!-- Js scripts -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js'></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
-
 
     <script src="./js/fontobserver.js"></script>
     <script src="./js/script.js"></script>
@@ -67,7 +67,7 @@
         </div>
 
         <div class="logo">
-            <a href="#">Logo</a>
+            <a href="#">GeniusX</a>
         </div>
 
         <div class="navbar-contacts">
@@ -110,7 +110,7 @@
             <h2 class="block-title">Наши курсы</h2>
             <div class="row">
                 <div class="col-lg">
-                    <div class="course">
+                    <div data-aos="fade-right" class="course">
                         <div class="course-background" style="background-image: url(./img/mnemo-kids.jpg);"></div>
                         <div class="course-content">
                             <h3 class="title">Спортивное запоминание <span class="nowrap">(7-14)</span></h3>
@@ -119,7 +119,7 @@
                     </div>
                 </div>
                 <div class="col-lg">
-                    <div class="course">
+                    <div data-aos="fade-left" class="course">
                         <div class="course-background" style="background-image: url(./img/mnemo-sports.jpg);"></div>
                         <div class="course-content">
                             <h3 class="title">Курс по мнемонике <span class="nowrap">(15-70)</span></h3>
@@ -128,7 +128,7 @@
                     </div>
                 </div>
                 <div class="col-sm">
-                    <div class="course">
+                    <div data-aos="fade-right" class="course">
                         <div class="course-background" style="background-image: url(./img/english-general.jpg);"></div>
                         <div class="course-content">
                             <h3 class="title">General English <span class="nowrap">(8-14)</span></h3>
@@ -140,7 +140,7 @@
                     <i class="fas fa-brain brain"></i>
                 </div>
                 <div class="col-sm">
-                    <div class="course">
+                    <div data-aos="fade-left" class="course">
                         <div class="course-background" style="background-image: url(./img/english-adults.jpg);"></div>
                         <div class="course-content">
                             <h3 class="title">General English <span class="nowrap">(15-70)</span></h3>
@@ -149,7 +149,7 @@
                     </div>
                 </div>
                 <div class="col-lg">
-                    <div class="course">
+                    <div data-aos="fade-right" class="course">
                         <div class="course-background" style="background-image: url(./img/english-ielts.jpg);"></div>
                         <div class="course-content">
                             <h3 class="title">IELTS</h3>
@@ -158,7 +158,7 @@
                     </div>
                 </div>
                 <div class="col-lg">
-                    <div class="course">
+                    <div data-aos="fade-left" class="course">
                         <div class="course-background" style="background-image: url(./img/english-ielts.jpg);"></div>
                         <div class="course-content">
                             <h3 class="title">Mnemo-IELTS <span class="nowrap">(спец курс)</span> </h3>
@@ -459,24 +459,22 @@
                         <div class="row-inner">
                             <div class="info-line">
                                 <h4 class="heading">Email</h4>
-                                <p class="value">info@example.com</p>
+                                <p class="value"><a href="mailto:Geniustash@mail.ru">Geniustash@mail.ru</a></p>
                             </div>
 
                             <div class="info-line">
                                 <h4 class="heading">Телефон</h4>
-                                <p class="value">+998(91) 123-45-67</p>
+                                <p class="value"><a href="tel:+998907889922">+998(90) 788-99-22</a></p>
                             </div>
 
                             <div class="info-line">
                                 <h4 class="heading">Адрес</h4>
-                                <p class="value">г.Ташкент ул.Бродуэй 23a</p>
+                                <p class="value">Ул. Амира Темира 46а</p>
                             </div>
 
                             <div class="info-line">
                                 <h4 class="heading">Время работы</h4>
-                                <p class="value">
-                                    Пн-Пт 09:00 до 20:00 <br> Сб-Вс 10:00 до 20:00
-                                </p>
+                                <p class="value">Пн-Пт 09:00 до 20:00 <br> Сб-Вс 10:00 до 20:00</p>
                             </div>
                             <div class="info-line">
                                 <h4 class="heading">Соц. сети</h4>
@@ -502,7 +500,7 @@
 
     <footer class="footer" id="footer">
         <div class="container">
-            <nav class="nav-footer">
+            <nav data-aos="fade-down" class="nav-footer">
                 <div class="flex-between">
                     <div class="logo">
                         <a href="#">Logo</a>
@@ -529,5 +527,12 @@
             </nav>
         </div>
     </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            disable: 'mobile'
+        });
+    </script>
 </body>
 </html>

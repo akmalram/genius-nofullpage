@@ -585,6 +585,10 @@
         }
         .value {
             font-size: 15px;
+
+            a {
+                color: #000;
+            }
         }
     }
     .map {
@@ -818,9 +822,9 @@ footer.footer {
     .socials {
         text-align: center;
         a {
-            color: #fff;
+            color: #000;
             &:hover {
-                border-color: #fff;
+                border-color: #000;
             }
         }
     }
@@ -830,16 +834,16 @@ footer.footer {
         margin: 0 auto;
         .logo a {
             font-size: 18px;
-            color: #fff;
+            color: #000;
         }
         .phone-call a {
             display: block;
             font-size: 20px;
-            color: #fff;
+            color: #000;
         }
         .links a {
             font-size: 18px;
-            color: #fff;
+            color: #000;
             display: inline-block;
             margin: 0 10px;
             &:hover {

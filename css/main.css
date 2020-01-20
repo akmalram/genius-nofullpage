@@ -809,6 +809,10 @@
   font-size: 15px;
 }
 
+.contacts .info-line .value a {
+  color: #000;
+}
+
 .contacts .map iframe {
   width: 90%;
   display: block;
@@ -1068,11 +1072,11 @@ footer.footer .socials {
 }
 
 footer.footer .socials a {
-  color: #fff;
+  color: #000;
 }
 
 footer.footer .socials a:hover {
-  border-color: #fff;
+  border-color: #000;
 }
 
 footer.footer .nav-footer {
@@ -1083,18 +1087,18 @@ footer.footer .nav-footer {
 
 footer.footer .nav-footer .logo a {
   font-size: 18px;
-  color: #fff;
+  color: #000;
 }
 
 footer.footer .nav-footer .phone-call a {
   display: block;
   font-size: 20px;
-  color: #fff;
+  color: #000;
 }
 
 footer.footer .nav-footer .links a {
   font-size: 18px;
-  color: #fff;
+  color: #000;
   display: inline-block;
   margin: 0 10px;
 }
