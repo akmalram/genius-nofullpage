@@ -346,16 +346,19 @@ ready(() => {
             .then(data => data.json())
             .then(parsedData => {
                 document.querySelector(selector).innerHTML = parsedData[field];
+            })
+            .catch(e => {
+                console.log(e);
             });
     }
 
-    loadData('../data/data.json', 'main_text', '#main_text');
-    loadData('../data/data.json', 'course-1-text', '#course-1-text');
-    loadData('../data/data.json', 'course-2-text', '#course-2-text');
-    loadData('../data/data.json', 'course-3-text', '#course-3-text');
-    loadData('../data/data.json', 'course-4-text', '#course-4-text');
-    loadData('../data/data.json', 'course-5-text', '#course-5-text');
-    loadData('../data/data.json', 'course-6-text', '#course-6-text');
+    loadData('https://akmalram.github.io/genius-nofullpage/data/data.json', 'main_text', '#main_text');
+    loadData('https://akmalram.github.io/genius-nofullpage/data/data.json', 'course-1-text', '#course-1-text');
+    loadData('https://akmalram.github.io/genius-nofullpage/data/data.json', 'course-2-text', '#course-2-text');
+    loadData('https://akmalram.github.io/genius-nofullpage/data/data.json', 'course-3-text', '#course-3-text');
+    loadData('https://akmalram.github.io/genius-nofullpage/data/data.json', 'course-4-text', '#course-4-text');
+    loadData('https://akmalram.github.io/genius-nofullpage/data/data.json', 'course-5-text', '#course-5-text');
+    loadData('https://akmalram.github.io/genius-nofullpage/data/data.json', 'course-6-text', '#course-6-text');
 });
 
 const fontAwesomeFreeObserver = new FontFaceObserver('Font Awesome 5 Free');
