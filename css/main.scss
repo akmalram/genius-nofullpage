@@ -2,6 +2,10 @@
 @import './smart-grid';
 @import './colors';
 
+main {
+    overflow-x: hidden;
+}
+
 
 .block-title {
     @include title-primary();
@@ -317,8 +321,8 @@
 
     .course {
         display: block;
-        width: 400px;
-        height: 400px;
+        width: 350px;
+        height: 350px;
         box-sizing: border-box;
         color: #fff;
         overflow: hidden;

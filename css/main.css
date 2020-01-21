@@ -1,3 +1,7 @@
+main {
+  overflow-x: hidden;
+}
+
 .block-title {
   font-size: 50px;
   color: #110f0f;
@@ -477,8 +481,8 @@
 
 .courses .course {
   display: block;
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #fff;
