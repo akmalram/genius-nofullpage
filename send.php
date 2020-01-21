@@ -1,36 +1,47 @@
 <?php
+// ----------------------------конфигурация-------------------------- //
 
-$API_KEY = "618316327:AAF6k6dspDoA38xmAtKbEwK0WjAha2-wTxM";
-$chat_id = -1001181675751;
+$adminEmail="Geniustash@mail.ru";  // e-mail админа
+$date=date("d.m.y"); // число.месяц.год
+$time=date("H:i"); // часы:минуты:секунды
 
-$name = $_POST['name'];
-$phone = $_POST['phone'];
-$email = $_POST['email'];
-$msg = $_POST['message'];
+//---------------------------------------------------------------------- //
 
-$message = "Имя: {$name}\n";
-$message .= "Телефон: {$phone}\n";
-$message .= "Почта: {$email}\n";
-$message .= "Сообщение: {$msg}\n";
+// Принимаем данные с формы
 
-	$url = 'https://api.telegram.org/bot' . $API_KEY . '/sendMessage?';
+$name=trim($_POST['name']);
+$phone=trim($_POST['phone']);
+$email=trim($_POST['email']);
+$text=trim($_POST['message']);
 
-	$fields = [
-        'chat_id' => urlencode($chat_id),
-        'parse_mode' => urlencode('HTML'),
-        'text' => urlencode($message),
-    ];
+$msg="
+Имя: $name,
+Номер телефона: $phone,
+Почта: $email,
+Сообщение: $text
+";
+// Отправляем письмо админу
 
-//url-ify the data for the POST
-foreach ($fields as $key => $value) {
-    $fields_string .= $key . '=' . $value . '&';
-}
-$fields_string = rtrim($fields_string, '&');
 
-$fields_string = str_replace(' ', '', $fields_string);
+$date = date('r');
 
-//echo $fields_string;
+$params = [
+    'form_id' => 572626,
+    'hash' => 'ea24ec98e595bc60fd073dfc308f5c29',
+    'user_origin' => "{\"datetime\":\"{$date}\",\"referer\":\"https://geniusxgenius.amocrm.ru/settings/pipeline/leads/1692421\"}",
+    'fields[name_1]' => $name,
+    'fields[25023_1][38671]' => $phone,
+    'fields[25025_1][38683]' => $email,
+    'fields[note_2]' => $text,
+];
 
-header("Location: {$url}{$fields_string}");
+$ch = curl_init('https://forms.amocrm.ru/queue/add');
+curl_setopt($ch, CURLOPT_HEADER, false);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, ($params));
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+$result = curl_exec($ch);
+curl_close($ch);
 
-?>
+mail("$adminEmail", "Заявка с сайта GeniusX от $name", "$msg");
