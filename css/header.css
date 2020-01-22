@@ -3,7 +3,7 @@ header {
   min-height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: url(../img/office-violet.jpg) no-repeat center center;
+  background: url(../img/webp/office-violet.webp) no-repeat center center;
   background-size: cover;
   -webkit-box-shadow: inset 0 0 1000rem 1000rem rgba(0, 0, 0, 0.5);
           box-shadow: inset 0 0 1000rem 1000rem rgba(0, 0, 0, 0.5);
