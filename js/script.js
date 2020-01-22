@@ -360,15 +360,3 @@ ready(() => {
     loadData('https://akmalram.github.io/genius-nofullpage/data/data.json', 'course-5-text', '#course-5-text');
     loadData('https://akmalram.github.io/genius-nofullpage/data/data.json', 'course-6-text', '#course-6-text');
 });
-
-const fontAwesomeFreeObserver = new FontFaceObserver('Font Awesome 5 Free');
-const fontAwesomeBrandsObserver = new FontFaceObserver('Font Awesome 5 Brands');
-const gilroyObserver = new FontFaceObserver('Gilroy');
-
-Promise.all([
-    fontAwesomeFreeObserver.load(),
-    fontAwesomeBrandsObserver.load(),
-    gilroyObserver.load()
-]).then(() => {
-    document.querySelector('html').classList.add('fonts-loaded');
-});
