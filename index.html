@@ -25,6 +25,30 @@
 
     <script src="./js/script.js"></script>
     <script src="./js/form-validation.js"></script>
+
+
+    <script>
+        const checkSupport = (fn) => {
+            var html = document.documentElement,
+                WebP = new Image();
+
+            WebP.onload = WebP.onerror = function () {
+                isSupported = (WebP.height === 2);
+
+                if (isSupported) {
+                    if (html.className.indexOf('no-webp') >= 0) {
+                        html.className = html.className.replace(/\bno-webp\b/, 'webp');
+                    } else {
+                        html.className += ' webp';
+                    }
+                }
+                fn(isSupported);
+            };
+            WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+        }
+
+        checkSupport();
+    </script>
 </head>
 
 <body>
@@ -113,8 +137,8 @@
             <h2 class="block-title">Наши курсы</h2>
             <div class="row">
                 <div class="col-lg">
-                    <div data-aos="fade-right" class="course">
-                        <div class="course-background" style="background-image: url(./img/mnemo-kids.jpg);"></div>
+                    <div data-aos="fade-right" class="course course-card-1">
+                        <div class="course-background"></div>
                         <div class="course-content">
                             <h3 class="title">Спортивное запоминание <span class="nowrap">(7-14)</span></h3>
                             <a data-modal-course="course-1" class="btn-secondary course-modal-btn">Подробнее</a>
@@ -122,8 +146,8 @@
                     </div>
                 </div>
                 <div class="col-lg">
-                    <div data-aos="fade-left" class="course">
-                        <div class="course-background" style="background-image: url(./img/mnemo-sports.jpg);"></div>
+                    <div data-aos="fade-left" class="course course-card-2">
+                        <div class="course-background"></div>
                         <div class="course-content">
                             <h3 class="title">Курс по мнемонике <span class="nowrap">(15-70)</span></h3>
                             <a data-modal-course="course-2" class="btn-secondary course-modal-btn">Подробнее</a>
@@ -131,8 +155,8 @@
                     </div>
                 </div>
                 <div class="col-sm">
-                    <div data-aos="fade-right" class="course">
-                        <div class="course-background" style="background-image: url(./img/english-general.jpg);"></div>
+                    <div data-aos="fade-right" class="course course-card-3">
+                        <div class="course-background"></div>
                         <div class="course-content">
                             <h3 class="title">General English <span class="nowrap">(8-14)</span></h3>
                             <a data-modal-course="course-3" class="btn-secondary course-modal-btn">Подробнее</a>
@@ -143,8 +167,8 @@
                     <i class="fas fa-brain brain"></i>
                 </div>
                 <div class="col-sm">
-                    <div data-aos="fade-left" class="course">
-                        <div class="course-background" style="background-image: url(./img/english-adults.jpg);"></div>
+                    <div data-aos="fade-left" class="course course-card-4">
+                        <div class="course-background"></div>
                         <div class="course-content">
                             <h3 class="title">General English <span class="nowrap">(15-70)</span></h3>
                             <a data-modal-course="course-4" class="btn-secondary course-modal-btn">Подробнее</a>
@@ -152,8 +176,8 @@
                     </div>
                 </div>
                 <div class="col-lg">
-                    <div data-aos="fade-right" class="course">
-                        <div class="course-background" style="background-image: url(./img/english-ielts.jpg);"></div>
+                    <div data-aos="fade-right" class="course course-card-5">
+                        <div class="course-background"></div>
                         <div class="course-content">
                             <h3 class="title">IELTS</h3>
                             <a data-modal-course="course-5" class="btn-secondary course-modal-btn">Подробнее</a>
@@ -161,8 +185,8 @@
                     </div>
                 </div>
                 <div class="col-lg">
-                    <div data-aos="fade-left" class="course">
-                        <div class="course-background" style="background-image: url(./img/brain.jpg);"></div>
+                    <div data-aos="fade-left" class="course course-card-6">
+                        <div class="course-background"></div>
                         <div class="course-content">
                             <h3 class="title">Mnemo-IELTS <span class="nowrap">(спец курс)</span> </h3>
                             <a data-modal-course="course-6" class="btn-secondary course-modal-btn">Подробнее</a>
@@ -391,6 +415,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="close-btn">+</div>
                 </div>
             </div>

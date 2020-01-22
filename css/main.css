@@ -479,6 +479,30 @@ main {
   display: block;
 }
 
+html.webp .courses .course-card-1 .course-background {
+  background-image: url(../img/webp/mnemo-kids.webp);
+}
+
+html.webp .courses .course-card-2 .course-background {
+  background-image: url(../img/webp/mnemo-sports.webp);
+}
+
+html.webp .courses .course-card-3 .course-background {
+  background-image: url(../img/webp/english-general.webp);
+}
+
+html.webp .courses .course-card-4 .course-background {
+  background-image: url(../img/webp/english-adults.webp);
+}
+
+html.webp .courses .course-card-5 .course-background {
+  background-image: url(../img/webp/english-ielts.webp);
+}
+
+html.webp .courses .course-card-6 .course-background {
+  background-image: url(../img/webp/brain.webp);
+}
+
 .courses .course {
   display: block;
   width: 350px;
@@ -507,6 +531,30 @@ main {
   .courses .course {
     height: 260px;
   }
+}
+
+.courses .course.course-card-1 .course-background {
+  background-image: url(../img/mnemo-kids.jpg);
+}
+
+.courses .course.course-card-2 .course-background {
+  background-image: url(../img/mnemo-sports.jpg);
+}
+
+.courses .course.course-card-3 .course-background {
+  background-image: url(../img/english-general.jpg);
+}
+
+.courses .course.course-card-4 .course-background {
+  background-image: url(../img/english-adults.jpg);
+}
+
+.courses .course.course-card-5 .course-background {
+  background-image: url(../img/english-ielts.jpg);
+}
+
+.courses .course.course-card-6 .course-background {
+  background-image: url(../img/brain.jpg);
 }
 
 .courses .course-content, .courses .course-background {
@@ -836,8 +884,8 @@ main {
   padding: 80px 0;
   background: url(../img/banner-brain-bg.jpg) no-repeat center center;
   background-size: cover;
-  min-height: 300px;
   background-attachment: fixed;
+  min-height: 300px;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;

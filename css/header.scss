@@ -6,7 +6,7 @@ header {
     color: #fff;
     min-height: 100vh;
     box-sizing: border-box;
-    background: url(../img/webp/office-violet.webp) no-repeat center center;
+    background: url(../img/office-violet.jpg) no-repeat center center;
     background-size: cover;
     box-shadow: inset 0 0 1000rem 1000rem rgba($color: #000000, $alpha: .5);
     display: flex;
@@ -15,6 +15,11 @@ header {
     align-items: center;
     text-align: center;
     position: relative;
+
+    html.webp & {
+        background: url(../img/webp/office-violet.webp) no-repeat center center;
+        background-size: cover;
+    }
 
     #particles-js {
         position: absolute;
