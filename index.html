@@ -28,7 +28,7 @@
 
 
     <script>
-        const checkSupport = (fn) => {
+        const checkSupport = () => {
             var html = document.documentElement,
                 WebP = new Image();
 
@@ -42,7 +42,6 @@
                         html.className += ' webp';
                     }
                 }
-                fn(isSupported);
             };
             WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
         }
