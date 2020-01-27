@@ -6,9 +6,9 @@ header {
     color: #fff;
     min-height: 100vh;
     box-sizing: border-box;
-    background: url(../img/office-violet.jpg) no-repeat center center;
+    background: url(../img/office-yellow.jpg) no-repeat center center;
     background-size: cover;
-    box-shadow: inset 0 0 1000rem 1000rem rgba($color: #000000, $alpha: .5);
+    // box-shadow: inset 0 0 1000rem 1000rem rgba($color: #000000, $alpha: .1);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,8 +17,35 @@ header {
     position: relative;
 
     html.webp & {
-        background: url(../img/webp/office-violet.webp) no-repeat center center;
+        background: url(../img/webp/office-yellow.webp) no-repeat center center;
         background-size: cover;
+    }
+
+    .to-smart-tashkent {
+        z-index: 50;
+        position: absolute;
+        bottom: 10vh;
+        right: 10vh;
+        width: 130px;
+        height: 130px;
+        background-color: $primary-color;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+
+        img {
+            width: 70%;
+        }
+
+        @include sm-block {
+            width: 70px;
+            height: 70px;
+            right: 5vh;
+            bottom: 5vh;
+        }
     }
 
     #particles-js {
@@ -50,8 +77,101 @@ canvas {
     display: block;
 }
 
+.smart-tashkent-modal {
+    .modal-content {
+        width: 1100px;
+    }
+
+    .title-secondary {
+        margin: 0;
+    }
+
+    .row-inner {
+        .left,
+        .right {
+            width: 50%;
+
+            @include sm-block {
+                width: 100%;
+            }
+        }
+
+        .left {
+            text-align: left;
+
+            p {
+                @include sm-block {
+                    font-size: 13px;
+                    max-height: 40vh;
+                    overflow-y: scroll;
+                    margin: 10px 0;
+                }
+            }
+        }
+
+        .gallery {
+            position: relative;
+            height: 100%;
+
+            img {
+                position: absolute;
+                width: 250px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition: all .3s ease;
+                border-radius: 2px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.05);
+
+                @include md-block {
+                    width: 200px;
+                }
+            }
+
+            &:hover .img-1 {
+                transform: translate(calc(-50% - 75px), calc(-50% - -45px)) scale(.9);
+            }
+
+            &:hover .img-2 {
+                transform: translate(calc(-50% - 0px), calc(-50% - 67px)) scale(.9);
+            }
+
+            &:hover .img-3 {
+                transform: translate(calc(-50% - -75px), calc(-50% - -45px)) scale(.9);
+            }
+
+            .img-1 {
+                transform: translate(calc(-50% - 75px), calc(-50% - -45px));
+
+                &:hover {
+                    transform: translate(calc(-50% - 75px), calc(-50% - -45px)) scale(1.1);
+                    z-index: 111;
+                }
+            }
+
+            .img-2 {
+                transform: translate(calc(-50% - 0px), calc(-50% - 67px));
+
+                &:hover {
+                    transform: translate(calc(-50% - 0px), calc(-50% - 67px)) scale(1.1);
+                    z-index: 111;
+                }
+            }
+
+            .img-3 {
+                transform: translate(calc(-50% - -75px), calc(-50% - -45px));
+
+                &:hover {
+                    transform: translate(calc(-50% - -75px), calc(-50% - -45px)) scale(1.1);
+                    z-index: 111;
+                }
+            }
+        }
+    }
+}
+
 .page-title {
-    font-size: 60px;
+    font-size: 35px;
     text-align: center;
     max-width: 90% !important;
     width: 700px;
@@ -103,7 +223,7 @@ canvas {
             }
 
             a {
-                font-size: 16px;
+                font-size: 15px;
                 padding: 4px 6px;
                 background-color: #0dace8;
                 color: #fff;
@@ -139,12 +259,16 @@ canvas {
             }
 
             a {
-                font-size: 19px;
-                color: #fff;
+                font-size: 16px;
+                color: #000;
                 transition: color .2s ease-in-out;
                 box-sizing: border-box;
                 line-height: 1;
                 transition: all .2s ease-in-out;
+                border: 2px solid #000;
+                padding: 2px 4px;
+                display: inline-block;
+                margin-bottom: 3px;
 
                 @include sm-block {
                     font-size: 17px;
@@ -186,7 +310,7 @@ canvas {
         .togglebtn .line,
         .togglebtn .line::before,
         .togglebtn .line::after {
-            background-color: #fff !important;
+            background: #fff !important;
         }
     }
 
@@ -217,7 +341,7 @@ canvas {
 
         a {
             font-size: 44px;
-            color: #fff;
+            color: #000;
             transition: all 800ms ease;
 
             @include xs-block {
@@ -333,7 +457,7 @@ canvas {
                 display: block;
                 width: 1.75rem;
                 height: 2px;
-                background: #fefefe;
+                background: #000;
                 line-height: 1;
                 position: relative;
                 display: block;
@@ -349,7 +473,7 @@ canvas {
                     width: 1.75rem;
                     height: 2px;
                     opacity: 1;
-                    background: #fefefe;
+                    background: #000;
                     transform: rotate(0);
                     border-radius: 5px;
                     transition: top 0.2s ease-in, opacity .2s ease-in, transform 0.2s 0.2s ease-out, background-color 0.4s ease, -webkit-transform 0.2s 0.2s ease-out;
@@ -388,6 +512,11 @@ canvas {
 }
 
 .socials {
+    .insta i {
+        background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
     a {
         color: #000;
         font-weight: normal;

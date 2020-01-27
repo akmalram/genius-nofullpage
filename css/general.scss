@@ -240,7 +240,8 @@ button {
 }
 
 .btn-primary {
-    @include btn($primary-color, #fff);
+    @include btn($primary-color, #000);
+    font-weight: bold;
 }
 
 .btn-secondary {
@@ -296,7 +297,7 @@ button {
     @include pulse($primary-color, 10px, pulse-primary);
 }
 
-.pulse-purple {
-    @include pulse($violet-color, 10px, violet);
+.pulse-black {
+    @include pulse($primary-color, 20px, violet);
 }
 

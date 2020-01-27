@@ -9,24 +9,15 @@
 
     <!-- Fonts -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' />
-    <!-- Css styles -->
     <link href="https://fonts.googleapis.com/css?family=Orbitron:600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600&display=swap" rel="stylesheet">
+
+    <!-- Css styles -->
     <link href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css'rel='stylesheet' />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="./css/general.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
     <link href="./css/header.css" rel="stylesheet">
-    <!-- Js scripts -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js'></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
-
-    <script src="./js/script.js"></script>
-    <script src="./js/form-validation.js"></script>
-
-
     <script>
         const checkSupport = () => {
             var html = document.documentElement,
@@ -70,6 +61,35 @@
         </div>
     </div>
 
+    <div class="modal smart-tashkent-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <h2 class="title-secondary">Умный Ташкент</h2>
+            <div class="row-inner">
+                <div class="left">
+                    <p>Каждая программа представляет собой краткий курс знаний по какому-либо разделу химии, физики, биологии, медицины и других наук. На наших программах мы по-максимуму руководствуемся достижениями современной педагогики - квестовые и игровые механики, гаджеты и мультимедийное оборудование. В каждой из лабораторий мы проводим эксперименты с оригиналами приборов, которые используются учёными или, напрмер, медиками. Весь набор реквизитов у нас привозной, соответственно поставляется из заграницы. Дети проводят все опыты своими руками под чутким надзором 3х лаборантов. Программа длится 2 часа. За это время ваш ребёнок побывает в 4х лабораториях. Нашей основной целью является: Разбудить интерес к науке, что бы он задавался вопросами и находил на них научные обоснованные ответы, что бы ребёнок начал сам что-то изучать и проводить самостоятельные исследования.</p>
+                </div>
+                <div class="right">
+                    <div class="swiper-container smart-tashkent-slider show-sm">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/st-1.jpg" alt="Умный Ташкент"></div>
+                            <div class="swiper-slide"><img src="./img/st-2.jpg" alt="Умный Ташкент"></div>
+                            <div class="swiper-slide"><img src="./img/st-3.jpg" alt="Умный Ташкент"></div>
+                            <div class="swiper-slide"><img src="./img/st-4.jpg" alt="Умный Ташкент"></div>
+                            <div class="swiper-slide"><img src="./img/st-5.jpg" alt="Умный Ташкент"></div>
+                        </div>
+                    </div>
+                    <div class="gallery hide-sm">
+                        <img src="./img/st-1.jpg" class="img-1" alt="Умный Ташкент">
+                        <img src="./img/st-2.jpg" class="img-2" alt="Умный Ташкент">
+                        <img src="./img/st-3.jpg" class="img-3" alt="Умный Ташкент">
+                    </div>
+                </div>
+            </div>
+            <div class="close-btn">+</div>
+        </div>
+    </div>
+
     <nav class="navbar">
         <div class="menu">
             <div class="menu-toggler">
@@ -95,7 +115,7 @@
 
         <div class="navbar-contacts">
             <div class="phone-call">
-                <a href="tel:+998907889922"><i class="fas fa-phone show-xs"></i> <span class="hide-xs">+998(90) 788-99-22</span></a>
+                <a href="tel:+998946987752"><i class="fas fa-phone show-xs"></i> <span class="hide-xs">+998(94) 698-77-52</span></a>
             </div>
             <div class="telegram">
                 <a target="_blank" href="https://t.me/IAMGeniusX"><i class="fab fa-telegram-plane"></i> <span class="hide-sm">Написать в</span> <span class="hide-xs">Телеграм</span></a>
@@ -106,40 +126,40 @@
 
     <header class="fullpage header">
         <div class="header-content">
-            <h1 class="page-title">Курсы спортивного запоминания и английского языка</h1>
+            <!-- <h1 class="page-title">Курсы спортивного запоминания и английского языка</h1> -->
             <a href="#courses" class="btn-primary pulse">Посмотреть курсы</a>
         </div>
         <div id="particles-js"></div>
+        <div class="to-smart-tashkent pulse-black smart-tashkent-modal-btn">
+            <img src="./img/smart-tashkent.png" alt="Логотип Умный Ташкент">
+        </div>
     </header>
 
     <main>
 
-        <div id="aboutus" class="fullpage aboutus">
-            <div class="container aboutus-wrapper flex-around">
-                <div class="content">
-                    <div class="background"></div>
-                    <picture>
-                        <source srcset="./img/webp/office-yellow.webp" type="image/webp">
-                        <img class="img" src="./img/office-yellow.jpg" alt="Our company">
-                    </picture>
-                    <h2 class="title-primary">О нас</h2>
-                    <p class="paragraph" id="main_text"></p>
-                </div>
-                <div class="video">
-                    <div class="background"></div>
-                    <iframe src="https://www.youtube.com/embed/ujX6CuRELFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div id="aboutus" class="aboutus">
+            <div class="container-mini">
+                <div class="flex-between">
+                    <div class="title-content">
+                        <h3 class="heading">О нас</h3>
+                        <h2 id="main_desc" class="desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, expedita!</h2>
+                        <a href="#contacts" class="btn-primary">Написать нам</a>
+                    </div>
+                    <div class="text-content">
+                        <p id="main_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugiat officiis, aspernatur itaque voluptatibus eveniet porro doloribus, distinctio labore blanditiis minus nihil?</p>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div id="courses" class="courses container">
             <h2 class="block-title">Наши курсы</h2>
-            <div class="row">
+            <div class="row-inner">
                 <div class="col-lg">
                     <div data-aos="fade-right" class="course course-card-1">
                         <div class="course-background"></div>
                         <div class="course-content">
-                            <h3 class="title">Спортивное запоминание <span class="nowrap">(7-14)</span></h3>
+                            <h3 class="title">Спортивное запоминание <span class="nowrap">(7-12) (13-17)</span></h3>
                             <a data-modal-course="course-1" class="btn-secondary course-modal-btn">Подробнее</a>
                         </div>
                     </div>
@@ -148,47 +168,30 @@
                     <div data-aos="fade-left" class="course course-card-2">
                         <div class="course-background"></div>
                         <div class="course-content">
-                            <h3 class="title">Курс по мнемонике <span class="nowrap">(15-70)</span></h3>
+                            <h3 class="title">Мнемоника <span class="nowrap">(18-70)</span></h3>
                             <a data-modal-course="course-2" class="btn-secondary course-modal-btn">Подробнее</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm">
-                    <div data-aos="fade-right" class="course course-card-3">
+
+                <div class="with-brain">
+                    <i class="fas fa-brain brain"></i>
+                </div>
+                <div class="col-lg">
+                    <div data-aos="fade-right" class="course course-card-6">
                         <div class="course-background"></div>
                         <div class="course-content">
-                            <h3 class="title">General English <span class="nowrap">(8-14)</span></h3>
+                            <h3 class="title">Mnemo-IELTS <span class="nowrap">за 2 месяца</span> </h3>
                             <a data-modal-course="course-3" class="btn-secondary course-modal-btn">Подробнее</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm with-brain">
-                    <i class="fas fa-brain brain"></i>
-                </div>
-                <div class="col-sm">
-                    <div data-aos="fade-left" class="course course-card-4">
+                <div class="col-lg">
+                    <div data-aos="fade-left" class="course course-card-3">
                         <div class="course-background"></div>
                         <div class="course-content">
-                            <h3 class="title">General English <span class="nowrap">(15-70)</span></h3>
+                            <h3 class="title">Genereal-English за <span class="nowrap">2 месяца</span></h3>
                             <a data-modal-course="course-4" class="btn-secondary course-modal-btn">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg">
-                    <div data-aos="fade-right" class="course course-card-5">
-                        <div class="course-background"></div>
-                        <div class="course-content">
-                            <h3 class="title">IELTS</h3>
-                            <a data-modal-course="course-5" class="btn-secondary course-modal-btn">Подробнее</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg">
-                    <div data-aos="fade-left" class="course course-card-6">
-                        <div class="course-background"></div>
-                        <div class="course-content">
-                            <h3 class="title">Mnemo-IELTS <span class="nowrap">(спец курс)</span> </h3>
-                            <a data-modal-course="course-6" class="btn-secondary course-modal-btn">Подробнее</a>
                         </div>
                     </div>
                 </div>
@@ -197,7 +200,7 @@
                 <div class="modal-background"></div>
                 <div class="modal-content big">
                     <div class="course-info course-1">
-                        <h3 class="title-secondary">Спортивное запоминание <span class="nowrap">(7-14)</span></h3>
+                        <h3 class="title-secondary">Спортивное запоминание<span class="nowrap">(7-12) (13-17)</span></h3>
                         <p class="pr" id="course-1-text"></p>
                         <div class="flex-around">
                             <div class="left">
@@ -205,10 +208,6 @@
                                     <li>
                                         <p class="prop">Продолжительность курса: </p>
                                         <p class="value">3 месяца (3 раза в неделю) <br> по 1.5 часа занятие</p>
-                                    </li>
-                                    <li>
-                                        <p class="prop">Стоимость курса: </p>
-                                        <p class="value">500.000 сум</p>
                                     </li>
                                     <li>
                                         <p class="prop">Что входит в стоимость курса:</p>
@@ -229,7 +228,7 @@
                     </div>
 
                     <div class="course-info course-2">
-                        <h3 class="title-secondary">Курс по мнемонике (15-70)</h3>
+                        <h3 class="title-secondary">Мнемоника (18-70)</h3>
                         <p class="pr"  id="course-2-text">
                             "Cпортивная мнемоника" детские курсы по развитию памяти. Практические методики по скоросному запоминанию различной информации. <br>
 
@@ -247,31 +246,12 @@
                             <div class="left">
                                 <ul>
                                     <li>
-                                        <div class="with-icon">
-                                            <img class="icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDYwIDYwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA2MCA2MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxnPgoJPHBhdGggZD0iTTMwLDBDMTMuNDU4LDAsMCwxMy40NTgsMCwzMHMxMy40NTgsMzAsMzAsMzBzMzAtMTMuNDU4LDMwLTMwUzQ2LjU0MiwwLDMwLDB6IE0zMCw1OEMxNC41NjEsNTgsMiw0NS40MzksMiwzMCAgIFMxNC41NjEsMiwzMCwyczI4LDEyLjU2MSwyOCwyOFM0NS40MzksNTgsMzAsNTh6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8cGF0aCBkPSJNMzEsMjYuMDIxVjE1Ljg3OWMwLTAuNTUzLTAuNDQ4LTEtMS0xcy0xLDAuNDQ3LTEsMXYxMC4xNDJjLTEuMzk5LDAuMzY0LTIuNDk0LDEuNDU5LTIuODU4LDIuODU4SDE5Yy0wLjU1MiwwLTEsMC40NDctMSwxICAgczAuNDQ4LDEsMSwxaDcuMTQyYzAuNDQ3LDEuNzIsMiwzLDMuODU4LDNjMi4yMDYsMCw0LTEuNzk0LDQtNEMzNCwyOC4wMiwzMi43MiwyNi40NjgsMzEsMjYuMDIxeiBNMzAsMzEuODc5Yy0xLjEwMywwLTItMC44OTctMi0yICAgczAuODk3LTIsMi0yczIsMC44OTcsMiwyUzMxLjEwMywzMS44NzksMzAsMzEuODc5eiIgZmlsbD0iIzAwMDAwMCIvPgoJPHBhdGggZD0iTTMwLDkuODc5YzAuNTUyLDAsMS0wLjQ0NywxLTF2LTFjMC0wLjU1My0wLjQ0OC0xLTEtMXMtMSwwLjQ0Ny0xLDF2MUMyOSw5LjQzMiwyOS40NDgsOS44NzksMzAsOS44Nzl6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8cGF0aCBkPSJNMzAsNDkuODc5Yy0wLjU1MiwwLTEsMC40NDctMSwxdjFjMCwwLjU1MywwLjQ0OCwxLDEsMXMxLTAuNDQ3LDEtMXYtMUMzMSw1MC4zMjYsMzAuNTUyLDQ5Ljg3OSwzMCw0OS44Nzl6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8cGF0aCBkPSJNNTIsMjguODc5aC0xYy0wLjU1MiwwLTEsMC40NDctMSwxczAuNDQ4LDEsMSwxaDFjMC41NTIsMCwxLTAuNDQ3LDEtMVM1Mi41NTIsMjguODc5LDUyLDI4Ljg3OXoiIGZpbGw9IiMwMDAwMDAiLz4KCTxwYXRoIGQ9Ik05LDI4Ljg3OUg4Yy0wLjU1MiwwLTEsMC40NDctMSwxczAuNDQ4LDEsMSwxaDFjMC41NTIsMCwxLTAuNDQ3LDEtMVM5LjU1MiwyOC44NzksOSwyOC44Nzl6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8cGF0aCBkPSJNNDQuODQ5LDEzLjYxNWwtMC43MDcsMC43MDdjLTAuMzkxLDAuMzkxLTAuMzkxLDEuMDIzLDAsMS40MTRjMC4xOTUsMC4xOTUsMC40NTEsMC4yOTMsMC43MDcsMC4yOTMgICBzMC41MTItMC4wOTgsMC43MDctMC4yOTNsMC43MDctMC43MDdjMC4zOTEtMC4zOTEsMC4zOTEtMS4wMjMsMC0xLjQxNFM0NS4yNCwxMy4yMjUsNDQuODQ5LDEzLjYxNXoiIGZpbGw9IiMwMDAwMDAiLz4KCTxwYXRoIGQ9Ik0xNC40NDQsNDQuMDIxbC0wLjcwNywwLjcwN2MtMC4zOTEsMC4zOTEtMC4zOTEsMS4wMjMsMCwxLjQxNGMwLjE5NSwwLjE5NSwwLjQ1MSwwLjI5MywwLjcwNywwLjI5MyAgIHMwLjUxMi0wLjA5OCwwLjcwNy0wLjI5M2wwLjcwNy0wLjcwN2MwLjM5MS0wLjM5MSwwLjM5MS0xLjAyMywwLTEuNDE0UzE0LjgzNCw0My42MzEsMTQuNDQ0LDQ0LjAyMXoiIGZpbGw9IiMwMDAwMDAiLz4KCTxwYXRoIGQ9Ik00NS41NTYsNDQuMDIxYy0wLjM5MS0wLjM5MS0xLjAyMy0wLjM5MS0xLjQxNCwwcy0wLjM5MSwxLjAyMywwLDEuNDE0bDAuNzA3LDAuNzA3YzAuMTk1LDAuMTk1LDAuNDUxLDAuMjkzLDAuNzA3LDAuMjkzICAgczAuNTEyLTAuMDk4LDAuNzA3LTAuMjkzYzAuMzkxLTAuMzkxLDAuMzkxLTEuMDIzLDAtMS40MTRMNDUuNTU2LDQ0LjAyMXoiIGZpbGw9IiMwMDAwMDAiLz4KCTxwYXRoIGQ9Ik0xNS4xNTEsMTMuNjE1Yy0wLjM5MS0wLjM5MS0xLjAyMy0wLjM5MS0xLjQxNCwwcy0wLjM5MSwxLjAyMywwLDEuNDE0bDAuNzA3LDAuNzA3YzAuMTk1LDAuMTk1LDAuNDUxLDAuMjkzLDAuNzA3LDAuMjkzICAgczAuNTEyLTAuMDk4LDAuNzA3LTAuMjkzYzAuMzkxLTAuMzkxLDAuMzkxLTEuMDIzLDAtMS40MTRMMTUuMTUxLDEzLjYxNXoiIGZpbGw9IiMwMDAwMDAiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K"/>
-                                            <div class="with-icon-content">
-                                                <p class="prop">Продолжительность курса: </p>
-                                                <p class="value">3 месяца (3 раза в неделю) <br> по 1.5 часа занятие</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="with-icon">
-                                            <img class="icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik00MzcuMDIsNzQuOThDMzg4LjY2OCwyNi42MjgsMzI0LjM4LDAsMjU2LDBTMTIzLjMzMiwyNi42MjgsNzQuOTgsNzQuOThDMjYuNjI5LDEyMy4zMzIsMCwxODcuNjIsMCwyNTYgICAgczI2LjYyOSwxMzIuNjY4LDc0Ljk4LDE4MS4wMkMxMjMuMzMyLDQ4NS4zNzIsMTg3LjYyLDUxMiwyNTYsNTEyczEzMi42NjgtMjYuNjI4LDE4MS4wMi03NC45OCAgICBDNDg1LjM3MSwzODguNjY4LDUxMiwzMjQuMzgsNTEyLDI1NlM0ODUuMzcxLDEyMy4zMzIsNDM3LjAyLDc0Ljk4eiBNMjU2LDQ4MkMxMzEuMzgzLDQ4MiwzMCwzODAuNjE3LDMwLDI1NlMxMzEuMzgzLDMwLDI1NiwzMCAgICBzMjI2LDEwMS4zODMsMjI2LDIyNlMzODAuNjE3LDQ4MiwyNTYsNDgyeiIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTI3Mi4wNjcsMjQxaC0zMi4xMzRjLTE4LjMwNywwLTMzLjItMTQuODkzLTMzLjItMzMuMTk5YzAtMTguMzA3LDE0Ljg5NC0zMy4yLDMzLjItMzMuMkgzMDQuMmM4LjI4NCwwLDE1LTYuNzE2LDE1LTE1ICAgIHMtNi43MTYtMTUtMTUtMTVIMjcxdi0zMy4yYzAtOC4yODQtNi43MTYtMTUtMTUtMTVzLTE1LDYuNzE2LTE1LDE1djMzLjJoLTEuMDY2Yy0zNC44NDksMC02My4yLDI4LjM1Mi02My4yLDYzLjIgICAgYzAsMzQuODQ4LDI4LjM1Miw2My4xOTksNjMuMiw2My4xOTloMzIuMTM0YzE4LjMwNiwwLDMzLjE5OSwxNC44OTQsMzMuMTk5LDMzLjJjMCwxOC4zMDYtMTQuODkzLDMzLjItMzMuMTk5LDMzLjJoLTY0LjI2NyAgICBjLTguMjg0LDAtMTUsNi43MTYtMTUsMTVzNi43MTYsMTUsMTUsMTVIMjQxdjMzLjIwMWMwLDguMjg0LDYuNzE2LDE1LDE1LDE1czE1LTYuNzE2LDE1LTE1VjM2Ny40aDEuMDY3ICAgIGMzNC44NDgsMCw2My4xOTktMjguMzUyLDYzLjE5OS02My4yUzMwNi45MTUsMjQxLDI3Mi4wNjcsMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo="/>
-                                            <div class="with-icon-content">
-                                                <p class="prop">Стоимость курса: </p>
-                                                <p class="value">500.000 сум</p>
-                                            </div>
-                                        </div>
+                                        <p class="prop">Продолжительность курса: </p>
+                                        <p class="value">3 месяца (3 раза в неделю) <br> по 1.5 часа занятие</p>
                                     </li>
                                     <li class="hide-sm">
-                                        <div class="with-icon">
-                                            <img class="icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI4MS40ODggMjgxLjQ4OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjgxLjQ4OCAyODEuNDg4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjUxMnB4IiBoZWlnaHQ9IjUxMnB4Ij4KPGc+Cgk8cGF0aCBkPSJNMTQwLjc0NCwwQzYzLjEzOCwwLDAsNjMuMTM4LDAsMTQwLjc0NHM2My4xMzgsMTQwLjc0NCwxNDAuNzQ0LDE0MC43NDRzMTQwLjc0NC02My4xMzgsMTQwLjc0NC0xNDAuNzQ0ICAgUzIxOC4zNTEsMCwxNDAuNzQ0LDB6IE0xNDAuNzQ0LDI2My40ODhDNzMuMDYzLDI2My40ODgsMTgsMjA4LjQyNiwxOCwxNDAuNzQ0UzczLjA2MywxOCwxNDAuNzQ0LDE4ICAgczEyMi43NDQsNTUuMDYzLDEyMi43NDQsMTIyLjc0NFMyMDguNDI1LDI2My40ODgsMTQwLjc0NCwyNjMuNDg4eiIgZmlsbD0iIzAwMDAwMCIvPgoJPHBhdGggZD0iTTIxMC45MTMsMTMxLjc0NGgtNjEuMTY4VjcwLjU3NmMwLTQuOTcxLTQuMDI5LTktOS05cy05LDQuMDI5LTksOXY2MS4xNjhINzAuNTc2Yy00Ljk3MSwwLTksNC4wMjktOSw5czQuMDI5LDksOSw5aDYxLjE2OCAgIHY2MS4xNjhjMCw0Ljk3MSw0LjAyOSw5LDksOXM5LTQuMDI5LDktOXYtNjEuMTY4aDYxLjE2OGM0Ljk3MSwwLDktNC4wMjksOS05UzIxNS44ODMsMTMxLjc0NCwyMTAuOTEzLDEzMS43NDR6IiBmaWxsPSIjMDAwMDAwIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg=="/>
-                                            <div class="with-icon-content">
-                                                <p class="prop">Что входит в стоимость курса:</p>
-                                                <p class="value">2 учебника, 1 тетрадь</p>
-                                            </div>
-                                        </div>
+                                        <p class="prop">Что входит в стоимость курса:</p>
+                                        <p class="value">2 учебника, 1 тетрадь</p>
                                     </li>
                                 </ul>
                             </div>
@@ -288,7 +268,7 @@
                     </div>
 
                     <div class="course-info course-3">
-                        <h3 class="title-secondary">Спортивное запоминание <span class="nowrap">(7-14)</span></h3>
+                        <h3 class="title-secondary">Mnemo-IELTS за <span class="nowrap">2 месяца</span></h3>
                         <p class="pr" id="course-3-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repellat ea quia! Nemo esse, similique nobis doloremque omnis consequatur expedita. Sapiente iure ut similique eum fugit laudantium consequatur? Molestias, vitae.</p>
                         <div class="flex-around">
                             <div class="left">
@@ -296,10 +276,6 @@
                                     <li>
                                         <p class="prop">Продолжительность курса: </p>
                                         <p class="value">3 месяца (3 раза в неделю) <br> по 1.5 часа занятие</p>
-                                    </li>
-                                    <li>
-                                        <p class="prop">Стоимость курса: </p>
-                                        <p class="value">500.000 сум</p>
                                     </li>
                                     <li>
                                         <p class="prop">Что входит в стоимость курса:</p>
@@ -320,7 +296,7 @@
                     </div>
 
                     <div class="course-info course-4">
-                        <h3 class="title-secondary">Спортивное запоминание <span class="nowrap">(7-14)</span></h3>
+                        <h3 class="title-secondary">Genereal-English за <span class="nowrap">2 месяца</span></h3>
                         <p class="pr" id="course-4-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repellat ea quia! Nemo esse, similique nobis doloremque omnis consequatur expedita. Sapiente iure ut similique eum fugit laudantium consequatur? Molestias, vitae.</p>
                         <div class="flex-around">
                             <div class="left">
@@ -328,74 +304,6 @@
                                     <li>
                                         <p class="prop">Продолжительность курса: </p>
                                         <p class="value">3 месяца (3 раза в неделю) <br> по 1.5 часа занятие</p>
-                                    </li>
-                                    <li>
-                                        <p class="prop">Стоимость курса: </p>
-                                        <p class="value">500.000 сум</p>
-                                    </li>
-                                    <li>
-                                        <p class="prop">Что входит в стоимость курса:</p>
-                                        <p class="value">2 учебника, 1 тетрадь</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="right">
-                                <form class="form course-form">
-                                    <h3 class="heading">Оставьте заявку</h3>
-                                    <input class="modal-input-name" type="text" name="name" placeholder="Ваше имя" required="true">
-                                    <input class="modal-input-phone" type="tel" name="phone" placeholder="Ваш номер" required="true">
-                                    <input type="hidden" name="hidden" value="Спортивное запоминание (7-14)">
-                                    <input class="btn-primary" type="submit" value="Отправить">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="course-info course-5">
-                        <h3 class="title-secondary">Спортивное запоминание <span class="nowrap">(7-14)</span></h3>
-                        <p class="pr" id="course-5-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repellat ea quia! Nemo esse, similique nobis doloremque omnis consequatur expedita. Sapiente iure ut similique eum fugit laudantium consequatur? Molestias, vitae.</p>
-                        <div class="flex-around">
-                            <div class="left">
-                                <ul>
-                                    <li>
-                                        <p class="prop">Продолжительность курса: </p>
-                                        <p class="value">3 месяца (3 раза в неделю) <br> по 1.5 часа занятие</p>
-                                    </li>
-                                    <li>
-                                        <p class="prop">Стоимость курса: </p>
-                                        <p class="value">500.000 сум</p>
-                                    </li>
-                                    <li>
-                                        <p class="prop">Что входит в стоимость курса:</p>
-                                        <p class="value">2 учебника, 1 тетрадь</p>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="right">
-                                <form class="form course-form">
-                                    <h3 class="heading">Оставьте заявку</h3>
-                                    <input class="modal-input-name" type="text" name="name" placeholder="Ваше имя" required="true">
-                                    <input class="modal-input-phone" type="tel" name="phone" placeholder="Ваш номер" required="true">
-                                    <input type="hidden" name="hidden" value="Спортивное запоминание (7-14)">
-                                    <input class="btn-primary" type="submit" value="Отправить">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="course-info course-6">
-                        <h3 class="title-secondary">Спортивное запоминание <span class="nowrap">(7-14)</span></h3>
-                        <p class="pr" id="course-6-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repellat ea quia! Nemo esse, similique nobis doloremque omnis consequatur expedita. Sapiente iure ut similique eum fugit laudantium consequatur? Molestias, vitae.</p>
-                        <div class="flex-around">
-                            <div class="left">
-                                <ul>
-                                    <li>
-                                        <p class="prop">Продолжительность курса: </p>
-                                        <p class="value">3 месяца (3 раза в неделю) <br> по 1.5 часа занятие</p>
-                                    </li>
-                                    <li>
-                                        <p class="prop">Стоимость курса: </p>
-                                        <p class="value">500.000 сум</p>
                                     </li>
                                     <li>
                                         <p class="prop">Что входит в стоимость курса:</p>
@@ -437,10 +345,7 @@
                             </picture>
                         </div>
                         <div class="swiper-slide">
-                            <picture>
-                                <source srcset="./img/webp/1-kanal.webp" type="image/webp">
-                                <img src="./img/1-kanal.png" alt="Первый канал">
-                            </picture>
+                            <img src="./img/webp/1-kanal.webp" onerror="this.onerror=null; this.src='./img/1-kanal.png'" alt="Первый канал">
                         </div>
                         <div class="swiper-slide">
                             <picture>
@@ -458,6 +363,12 @@
                             <picture>
                                 <source srcset="./img/webp/smart-tashkent-logo.webp" type="image/webp">
                                 <img src="./img/smart-tashkent-logo.jpg" alt="Умный Ташкент">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <source srcset="./img/webp/tm-logo.webp" type="image/webp">
+                                <img src="./img/tm-logo.jpg" alt="Умный Ташкент">
                             </picture>
                         </div>
                     </div>
@@ -516,26 +427,27 @@
 
                             <div class="info-line">
                                 <h4 class="heading">Телефон</h4>
+                                <p class="value"><a href="tel:+998946987752">+998(94) 698-77-52</a></p>
                                 <p class="value"><a href="tel:+998907889922">+998(90) 788-99-22</a></p>
                             </div>
 
                             <div class="info-line">
                                 <h4 class="heading">Адрес</h4>
-                                <p class="value">Ул. Амира Темира 46а</p>
+                                <p class="value">Проспект Амира Темира 46а</p>
                             </div>
 
                             <div class="info-line">
                                 <h4 class="heading">Время работы</h4>
-                                <p class="value">Пн-Пт 09:00 до 20:00 <br> Сб-Вс 10:00 до 20:00</p>
+                                <p class="value">Пн-Вс 09:00 до 21:00</p>
                             </div>
                             <div class="info-line">
                                 <h4 class="heading">Соц. сети</h4>
                                 <div class="value">
                                     <div class="socials">
-                                        <a target="_blank" href="https://t.me/IAMGeniusX"><i class="fab fa-telegram"></i></a>
-                                        <a target="_blank" href="#"><i class="fab fa-whatsapp"></i></a>
-                                        <a target="_blank" href="https://www.instagram.com/geniusx.uz/"><i class="fab fa-instagram"></i></a>
-                                        <a target="_blank" href="#"><i class="fab fa-facebook"></i></a>
+                                        <a target="_blank" style="color: #0dace8;" href="https://t.me/IAMGeniusX"><i class="fab fa-telegram"></i></a>
+                                        <a target="_blank" style="color: #25d366;" href="#"><i class="fab fa-whatsapp"></i></a>
+                                        <a target="_blank" class="insta" href="https://www.instagram.com/geniusx.uz/"><i class="fab fa-instagram"></i></a>
+                                        <a target="_blank" style="color: #3b5998;" href="https://www.facebook.com/geniusx.uz"><i class="fab fa-facebook"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -566,24 +478,41 @@
                 </div>
                 <div class="flex-between mt30">
                     <div class="phone-call">
+                        <a href="tel:+998946987752">+998(94) 698-77-52</a>
                         <a href="tel:+998907889922">+998(90) 788-99-22</a>
                         <a href="mailto:Geniustash@mail.ru">Geniustash@mail.ru</a>
                     </div>
                     <div class="socials">
-                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="https://t.me/IAMGeniusX"><i class="fab fa-telegram"></i></a>
                         <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/geniusx.uz/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/geniusx.uz"><i class="fab fa-facebook"></i></a>
                     </div>
                 </div>
             </nav>
         </div>
     </footer>
 
+
+    <!-- Js scripts -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js'></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/form-validation.js"></script>
+
     <script>
         AOS.init({
             duration: 800,
             disable: 'mobile'
+        });
+
+        let smartTashkentSlider = new Swiper('.swiper-container.smart-tashkent-slider', {
+            autoplay: {
+                delay: 3000
+            }
         });
     </script>
 </body>

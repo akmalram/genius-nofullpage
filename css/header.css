@@ -3,10 +3,8 @@ header {
   min-height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: url(../img/office-violet.jpg) no-repeat center center;
+  background: url(../img/office-yellow.jpg) no-repeat center center;
   background-size: cover;
-  -webkit-box-shadow: inset 0 0 1000rem 1000rem rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0 0 1000rem 1000rem rgba(0, 0, 0, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,8 +23,44 @@ header {
 }
 
 html.webp header {
-  background: url(../img/webp/office-violet.webp) no-repeat center center;
+  background: url(../img/webp/office-yellow.webp) no-repeat center center;
   background-size: cover;
+}
+
+header .to-smart-tashkent {
+  z-index: 50;
+  position: absolute;
+  bottom: 10vh;
+  right: 10vh;
+  width: 130px;
+  height: 130px;
+  background-color: #FDCA00;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+header .to-smart-tashkent img {
+  width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+  header .to-smart-tashkent {
+    width: 70px;
+    height: 70px;
+    right: 5vh;
+    bottom: 5vh;
+  }
 }
 
 header #particles-js {
@@ -46,7 +80,7 @@ header .header-content {
 }
 
 header .btn-primary {
-  background: #F2C879;
+  background: #FDCA00;
 }
 
 @media screen and (max-width: 768px) {
@@ -59,8 +93,114 @@ canvas {
   display: block;
 }
 
+.smart-tashkent-modal .modal-content {
+  width: 1100px;
+}
+
+.smart-tashkent-modal .title-secondary {
+  margin: 0;
+}
+
+.smart-tashkent-modal .row-inner .left,
+.smart-tashkent-modal .row-inner .right {
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .smart-tashkent-modal .row-inner .left,
+  .smart-tashkent-modal .row-inner .right {
+    width: 100%;
+  }
+}
+
+.smart-tashkent-modal .row-inner .left {
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .smart-tashkent-modal .row-inner .left p {
+    font-size: 13px;
+    max-height: 40vh;
+    overflow-y: scroll;
+    margin: 10px 0;
+  }
+}
+
+.smart-tashkent-modal .row-inner .gallery {
+  position: relative;
+  height: 100%;
+}
+
+.smart-tashkent-modal .row-inner .gallery img {
+  position: absolute;
+  width: 250px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+@media screen and (max-width: 1024px) {
+  .smart-tashkent-modal .row-inner .gallery img {
+    width: 200px;
+  }
+}
+
+.smart-tashkent-modal .row-inner .gallery:hover .img-1 {
+  -webkit-transform: translate(calc(-50% - 75px), calc(-50% - -45px)) scale(0.9);
+          transform: translate(calc(-50% - 75px), calc(-50% - -45px)) scale(0.9);
+}
+
+.smart-tashkent-modal .row-inner .gallery:hover .img-2 {
+  -webkit-transform: translate(calc(-50% - 0px), calc(-50% - 67px)) scale(0.9);
+          transform: translate(calc(-50% - 0px), calc(-50% - 67px)) scale(0.9);
+}
+
+.smart-tashkent-modal .row-inner .gallery:hover .img-3 {
+  -webkit-transform: translate(calc(-50% - -75px), calc(-50% - -45px)) scale(0.9);
+          transform: translate(calc(-50% - -75px), calc(-50% - -45px)) scale(0.9);
+}
+
+.smart-tashkent-modal .row-inner .gallery .img-1 {
+  -webkit-transform: translate(calc(-50% - 75px), calc(-50% - -45px));
+          transform: translate(calc(-50% - 75px), calc(-50% - -45px));
+}
+
+.smart-tashkent-modal .row-inner .gallery .img-1:hover {
+  -webkit-transform: translate(calc(-50% - 75px), calc(-50% - -45px)) scale(1.1);
+          transform: translate(calc(-50% - 75px), calc(-50% - -45px)) scale(1.1);
+  z-index: 111;
+}
+
+.smart-tashkent-modal .row-inner .gallery .img-2 {
+  -webkit-transform: translate(calc(-50% - 0px), calc(-50% - 67px));
+          transform: translate(calc(-50% - 0px), calc(-50% - 67px));
+}
+
+.smart-tashkent-modal .row-inner .gallery .img-2:hover {
+  -webkit-transform: translate(calc(-50% - 0px), calc(-50% - 67px)) scale(1.1);
+          transform: translate(calc(-50% - 0px), calc(-50% - 67px)) scale(1.1);
+  z-index: 111;
+}
+
+.smart-tashkent-modal .row-inner .gallery .img-3 {
+  -webkit-transform: translate(calc(-50% - -75px), calc(-50% - -45px));
+          transform: translate(calc(-50% - -75px), calc(-50% - -45px));
+}
+
+.smart-tashkent-modal .row-inner .gallery .img-3:hover {
+  -webkit-transform: translate(calc(-50% - -75px), calc(-50% - -45px)) scale(1.1);
+          transform: translate(calc(-50% - -75px), calc(-50% - -45px)) scale(1.1);
+  z-index: 111;
+}
+
 .page-title {
-  font-size: 60px;
+  font-size: 35px;
   text-align: center;
   max-width: 90% !important;
   width: 700px;
@@ -134,7 +274,7 @@ canvas {
 }
 
 .navbar-contacts .telegram a {
-  font-size: 16px;
+  font-size: 15px;
   padding: 4px 6px;
   background-color: #0dace8;
   color: #fff;
@@ -184,8 +324,8 @@ canvas {
 }
 
 .navbar-contacts .phone-call a {
-  font-size: 19px;
-  color: #fff;
+  font-size: 16px;
+  color: #000;
   -webkit-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
   -webkit-box-sizing: border-box;
@@ -193,6 +333,10 @@ canvas {
   line-height: 1;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+  border: 2px solid #000;
+  padding: 2px 4px;
+  display: inline-block;
+  margin-bottom: 3px;
 }
 
 @media screen and (max-width: 768px) {
@@ -238,7 +382,7 @@ canvas {
 .navbar.scrolled.modalOpened .togglebtn .line,
 .navbar.scrolled.modalOpened .togglebtn .line::before,
 .navbar.scrolled.modalOpened .togglebtn .line::after {
-  background-color: #fff !important;
+  background: #fff !important;
 }
 
 .navbar.scrolled {
@@ -270,7 +414,7 @@ canvas {
 
 .navbar .logo a {
   font-size: 44px;
-  color: #fff;
+  color: #000;
   -webkit-transition: all 800ms ease;
   transition: all 800ms ease;
 }
@@ -430,7 +574,7 @@ canvas {
   display: block;
   width: 1.75rem;
   height: 2px;
-  background: #fefefe;
+  background: #000;
   line-height: 1;
   position: relative;
   display: block;
@@ -447,7 +591,7 @@ canvas {
   width: 1.75rem;
   height: 2px;
   opacity: 1;
-  background: #fefefe;
+  background: #000;
   -webkit-transform: rotate(0);
           transform: rotate(0);
   border-radius: 5px;
@@ -481,6 +625,12 @@ canvas {
   opacity: 0;
   -webkit-transition: top 0.2s ease-in, opacity 0.2s 0.2s ease-out, background-color 0.4s ease;
   transition: top 0.2s ease-in, opacity 0.2s 0.2s ease-out, background-color 0.4s ease;
+}
+
+.socials .insta i {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .socials a {
